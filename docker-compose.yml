@@ -1,0 +1,16 @@
+services:
+  app:
+    build: .
+    environment:
+      MYSQLHOST: db
+      MYSQLPORT: 3306
+      MYSQLDATABASE: ebond
+      MYSQLUSER: root
+      MYSQLPASSWORD: secret
+    depends_on:
+      - db
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: ebond
