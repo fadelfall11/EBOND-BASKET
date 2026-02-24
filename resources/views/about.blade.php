@@ -15,35 +15,6 @@
     </div>
 </section>
 
-<!-- Values Section -->
-<section class="section" style="background: #f8fafc;">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Nos Valeurs</h2>
-            <p class="section-subtitle">
-                Les principes qui guident notre action chaque jour
-            </p>
-        </div>
-        
-        <div class="stats-grid">
-            @foreach([
-                ['icon' => 'fas fa-heart', 'title' => 'Passion', 'desc' => "L'amour du basketball comme moteur de notre engagement quotidien"],
-                ['icon' => 'fas fa-graduation-cap', 'title' => 'Excellence', 'desc' => 'La recherche constante de la perfection technique et humaine'],
-                ['icon' => 'fas fa-users', 'title' => 'Solidarité', 'desc' => "L'esprit d'équipe et le soutien mutuel comme fondement"],
-                ['icon' => 'fas fa-medal', 'title' => 'Intégrité', 'desc' => "Le respect des règles et l'honnêteté dans toutes nos actions"]
-            ] as $value)
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="{{ $value['icon'] }}"></i>
-                    </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; color: #1e293b;">{{ $value['title'] }}</h3>
-                    <p style="color: #64748b; line-height: 1.6;">{{ $value['desc'] }}</p>
-                </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
 <!-- Coaches Section -->
 <section class="section">
     <div class="container">
