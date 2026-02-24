@@ -67,11 +67,6 @@
                                             <span class="value" style="color:#f59e0b;">{{ optional($categorie->joueurs->where('capitaine', true)->first())->full_name ?? '—' }}</span>
                                         </div>
                                     </div>
-                                    
-                                    <a href="{{ route('categories.show', $categorie) }}" class="btn-primary" style="width: 100%; justify-content: center;">
-                                        Voir l'équipe
-                                        <i class="fas fa-arrow-right"></i>
-                                    </a>
                                 </div>
                             </div>
                         @endforeach
@@ -119,11 +114,6 @@
                                             <span class="value" style="color:#f59e0b;">{{ optional($categorie->joueurs->where('capitaine', true)->first())->full_name ?? '—' }}</span>
                                         </div>
                                     </div>
-                                    
-                                    <a href="{{ route('categories.show', $categorie) }}" class="btn-primary" style="width: 100%; justify-content: center; background: linear-gradient(135deg, #ec4899, #f472b6);">
-                                        Voir l'équipe
-                                        <i class="fas fa-arrow-right"></i>
-                                    </a>
                                 </div>
                             </div>
                         @endforeach
