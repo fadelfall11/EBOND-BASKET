@@ -21,17 +21,10 @@
                 Rejoignez une communauté dédiée à l'excellence sportive et humaine.
             </p>
             <div class="hero-buttons">
-                @auth
-                    <a href="{{ route('categories.index') }}" class="btn-white">
-                        <i class="fas fa-users"></i>
-                        Voir nos catégories
-                    </a>
-                @else
-                    <a href="{{ route('register') }}" class="btn-white">
-                        <i class="fas fa-user-plus"></i>
-                        S'inscrire pour accéder
-                    </a>
-                @endauth
+                <a href="{{ route('categories.index') }}" class="btn-white">
+                    <i class="fas fa-users"></i>
+                    Voir nos catégories
+                </a>
                 <a href="{{ route('about') }}" class="btn-outline">
                     <i class="fas fa-info-circle"></i>
                     En savoir plus

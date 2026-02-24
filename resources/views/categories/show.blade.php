@@ -143,17 +143,10 @@
                 Contactez notre coach pour plus d'informations sur les inscriptions
             </p>
             <div class="hero-buttons" style="justify-content: center;">
-                @auth
-                    <a href="mailto:{{ $categorie->coach?->email ?? 'contact@ebond.sn' }}" class="btn-white">
-                        <i class="fas fa-envelope"></i>
-                        Contacter le coach
-                    </a>
-                @else
-                    <a href="{{ route('register') }}" class="btn-white">
-                        <i class="fas fa-user-plus"></i>
-                        S'inscrire pour contacter
-                    </a>
-                @endauth
+                <a href="mailto:{{ $categorie->coach?->email ?? 'contact@ebond.sn' }}" class="btn-white">
+                    <i class="fas fa-envelope"></i>
+                    Contacter le coach
+                </a>
                 <a href="{{ route('categories.index') }}" class="btn-outline">
                     <i class="fas fa-list"></i>
                     Voir autres catégories

@@ -68,17 +68,10 @@
                                         </div>
                                     </div>
                                     
-                                    @auth
-                                        <a href="{{ route('categories.show', $categorie) }}" class="btn-primary" style="width: 100%; justify-content: center;">
-                                            Voir l'équipe
-                                            <i class="fas fa-arrow-right"></i>
-                                        </a>
-                                    @else
-                                        <a href="{{ route('register') }}" class="btn-primary" style="width: 100%; justify-content: center;">
-                                            <i class="fas fa-user-plus"></i>
-                                            S'inscrire pour voir l'équipe
-                                        </a>
-                                    @endauth
+                                    <a href="{{ route('categories.show', $categorie) }}" class="btn-primary" style="width: 100%; justify-content: center;">
+                                        Voir l'équipe
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
                                 </div>
                             </div>
                         @endforeach

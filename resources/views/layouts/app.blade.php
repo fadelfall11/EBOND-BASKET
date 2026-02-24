@@ -764,66 +764,12 @@
                 <a href="{{ route('categories.index') }}" class="nav-link">Catégories</a>
                 <a href="{{ route('actualites.index') }}" class="nav-link">Actualités</a>
                 <a href="{{ route('emploi-du-temps.index') }}" class="nav-link">Emploi du Temps</a>
-                @guest
-                    <a href="{{ route('register') }}" class="btn-primary">
-                        <i class="fas fa-user-plus"></i>
-                        S'inscrire
+                @if(Auth::check() && Auth::user()?->is_admin)
+                    <a href="{{ route('admin.dashboard') }}" class="btn-primary">
+                        <i class="fas fa-shield-halved"></i>
+                        Admin
                     </a>
-                    <a href="{{ route('login') }}" style="color: #64748b; text-decoration: none; font-weight: 500; margin-left: 1rem;">
-                        Connexion
-                    </a>
-                @else
-                    <a href="{{ route('dashboard') }}" class="btn-primary">
-                        <i class="fas fa-tachometer-alt"></i>
-                        Dashboard
-                    </a>
-
-                    @if(Auth::user()?->is_admin)
-                        <a href="{{ route('admin.dashboard') }}" class="btn-primary">
-                            <i class="fas fa-shield-halved"></i>
-                            Admin
-                        </a>
-                    @endif
-
-                    <details class="profile-menu">
-                        <summary class="profile-trigger" aria-label="Profil">
-                            <i class="fas fa-user"></i>
-                        </summary>
-
-                        <div class="profile-dropdown">
-                            @php
-                                $fullName = trim((string) Auth::user()->name);
-                                $parts = preg_split('/\s+/', $fullName, -1, PREG_SPLIT_NO_EMPTY) ?: [];
-                                $prenom = $parts[0] ?? $fullName;
-                                $nom = count($parts) > 1 ? implode(' ', array_slice($parts, 1)) : '';
-                            @endphp
-
-                            <div class="profile-dropdown-header">
-                                <div class="profile-dropdown-name">
-                                    {{ $prenom }}@if($nom) {{ $nom }}@endif
-                                </div>
-                                <div class="profile-dropdown-email">{{ Auth::user()->email }}</div>
-                            </div>
-
-                            <a href="{{ route('profile.edit') }}#infos">
-                                <i class="fas fa-id-card"></i>
-                                Mes informations
-                            </a>
-                            <a href="{{ route('profile.edit') }}#mot-de-passe">
-                                <i class="fas fa-key"></i>
-                                Modifier mon mot de passe
-                            </a>
-
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-                                <button type="submit">
-                                    <i class="fas fa-right-from-bracket"></i>
-                                    Se déconnecter
-                                </button>
-                            </form>
-                        </div>
-                    </details>
-                @endguest
+                @endif
             </div>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn">
