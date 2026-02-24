@@ -41,15 +41,18 @@ php artisan cache:clear --quiet 2>/dev/null || true
 # Try to run migrations if database is available
 echo "🔄 Running migrations..."
 php artisan migrate --force --quiet 2>/dev/null
+migrate_status=$?
 
-if [ $? -eq 0 ]; then
+if [ $migrate_status -eq 0 ]; then
     echo "✅ Migrations completed successfully"
+    echo "🌱 Seeding database..."
+    php artisan db:seed --force --quiet 2>/dev/null || true
 else
     echo "⚠️  Migrations failed or database not available - starting anyway"
 fi
 
 # If migrations failed, fallback to SQLite to allow the site to run
-if [ $? -ne 0 ]; then
+if [ $migrate_status -ne 0 ]; then
     echo "🛠️ Falling back to SQLite to avoid DB connection errors..."
     export DB_CONNECTION=sqlite
     export DB_DATABASE=database/database.sqlite
