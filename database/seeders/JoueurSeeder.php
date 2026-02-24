@@ -57,7 +57,7 @@ class JoueurSeeder extends Seeder
             ['prenom' => 'Serigne Saliou', 'nom' => 'Gueye', 'poste' => 'Pivot', 'categorie_id' => $cadetsGarcons->id, 'numero' => 7, 'capitaine' => false, 'eloges' => 'Présence intérieure, protège le cercle et sécurise les rebonds.'],
             ['prenom' => 'Ablaye', 'nom' => 'Dione', 'poste' => 'Meneur', 'categorie_id' => $cadetsGarcons->id, 'numero' => 8, 'capitaine' => false, 'eloges' => 'Meneur organisé, donne le tempo et met ses coéquipiers dans les meilleures positions.'],
             ['prenom' => 'Assana', 'nom' => 'Ndiaye', 'poste' => 'Meneur', 'categorie_id' => $cadetsGarcons->id, 'numero' => 9, 'capitaine' => false, 'photo' => 'joueurs/ASSANA NDIAYE.jpeg', 'eloges' => 'Meneur dynamique, il met de l\'intensité en défense et donne du rythme à l\'équipe.'],
-            ['prenom' => 'Babacar', 'nom' => 'Ngingue', 'poste' => 'Ailier', 'categorie_id' => $cadetsGarcons->id, 'numero' => 11, 'capitaine' => false, 'eloges' => 'Ailier polyvalent, utile des deux côtés du terrain avec une bonne activité.'],
+            ['prenom' => 'Babacar', 'nom' => 'Ngingue', 'poste' => 'Ailier', 'categorie_id' => $cadetsGarcons->id, 'numero' => 11, 'capitaine' => false, 'photo' => 'joueurs/my name.jpeg', 'eloges' => 'Ailier polyvalent, utile des deux côtés du terrain avec une bonne activité.'],
 
             // Minimes Garçons
             // papa idy omar sy,thierno konté,ousmane samb,serigne saliou,thierno,birahim diba,pape maguette,fallou
