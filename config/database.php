@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Str;
 
+$envConnection = env('DB_CONNECTION');
+$allowedConnections = ['sqlite', 'mysql', 'mariadb', 'pgsql', 'sqlsrv'];
+$defaultConnection = in_array($envConnection, $allowedConnections, true)
+    ? $envConnection
+    : (env('DATABASE_URL') ? 'mysql' : 'sqlite');
+
 return [
 
     /*
@@ -16,7 +22,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION') ?: (env('DATABASE_URL') ? 'mysql' : 'sqlite'),
+    'default' => $defaultConnection,
 
     /*
     |--------------------------------------------------------------------------
