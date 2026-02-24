@@ -101,11 +101,7 @@
                 <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; color: #334155;">
                     Aucun{{ $categorie->genre == 'garcon' ? ' joueur' : 'e joueuse' }} dans cette catégorie
                 </h3>
-                <p style="color: #64748b; margin-bottom: 2rem;">L'équipe est en cours de formation. Revenez bientôt !</p>
-                <a href="{{ route('categories.index') }}" class="btn-primary">
-                    <i class="fas fa-arrow-left"></i>
-                    Retour aux catégories
-                </a>
+                <p style="color: #64748b;">L'équipe est en cours de formation. Revenez bientôt !</p>
             </div>
         @endif
     </div>
