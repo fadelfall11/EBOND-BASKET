@@ -39,7 +39,7 @@
                     
                     <div class="cards-grid">
                         @foreach ($categoriesGarcons as $categorie)
-                            <div class="card">
+                            <a href="{{ route('categories.show', $categorie) }}" class="card" style="display: block; text-decoration: none; color: inherit;">
                                 @if($categorie->photo)
                                     <img src="{{ asset('images/' . $categorie->photo) }}" alt="{{ $categorie->nom }}" class="card-image" style="{{ $categorie->photo_style }}">
                                 @else
@@ -68,7 +68,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                     
                     <div class="cards-grid">
                         @foreach ($categoriesFilles as $categorie)
-                            <div class="card">
+                            <a href="{{ route('categories.show', $categorie) }}" class="card" style="display: block; text-decoration: none; color: inherit;">
                                 @if($categorie->photo)
                                     <img src="{{ asset('images/' . $categorie->photo) }}" alt="{{ $categorie->nom }}" class="card-image" style="{{ $categorie->photo_style }}">
                                 @else
@@ -97,7 +97,7 @@
                                 <div class="card-content">
                                     <div style="display:flex; align-items:center; justify-content:space-between; gap:0.75rem; margin-bottom:1rem;">
                                         <h3 class="card-title" style="margin:0;">{{ $categorie->nom }}</h3>
-                                        <span class="badge" style="background:#ec4899; color:white;">{{ $categorie->age_min }}–{{ $categorie->age_max }} ans</span>
+                                        <span class="badge badge-yellow" style="background: linear-gradient(135deg, #ec4899, #f472b6);">{{ $categorie->age_min }}–{{ $categorie->age_max }} ans</span>
                                     </div>
                                     
                                     <div class="info-grid">
@@ -115,7 +115,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>
