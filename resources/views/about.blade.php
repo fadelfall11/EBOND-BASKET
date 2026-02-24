@@ -15,45 +15,6 @@
     </div>
 </section>
 
-<!-- Story Section -->
-<section class="section">
-    <div class="container">
-        <div style="max-width: 900px; margin: 0 auto;">
-            @foreach([
-                [
-                    'icon' => 'fas fa-basketball-ball',
-                    'title' => 'Les Origines',
-                    'content' => "EBOND est une école de basket née d'une vision simple mais puissante : offrir aux jeunes Sénégalais une formation de qualité dans un sport qui allie discipline, teamwork et excellence. Notre école a été créée pour développer les talents et former les champions de demain."
-                ],
-                [
-                    'icon' => 'fas fa-trophy',
-                    'title' => 'La Croissance',
-                    'content' => "Dès ses débuts avec seulement <strong>15 jeunes passionnés</strong> dans un quartier de Dakar, l'école a connu une croissance remarquable. Grâce à des méthodes d'entraînement innovantes et une approche holistique du développement, nous sommes rapidement devenus une référence au Sénégal. Aujourd'hui, nous accueillons plus de <strong>120 jeunes</strong> répartis dans <strong>8 catégories</strong> différentes, des débutants aux seniors."
-                ],
-                [
-                    'icon' => 'fas fa-eye',
-                    'title' => 'Notre Vision',
-                    'content' => "Notre vision est de devenir la <strong>meilleure école de basketball d'Afrique</strong>, non seulement en termes de performance sportive, mais aussi en tant que centre de développement humain. Nous voulons continuer à former non seulement d'excellents joueurs, mais aussi des <strong>leaders de demain</strong> qui porteront haut les couleurs du Sénégal sur et en dehors des terrains."
-                ]
-            ] as $story)
-                <div class="card" style="margin-bottom: 2rem;">
-                    <div class="card-content">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div class="stat-icon" style="margin: 0;">
-                                <i class="{{ $story['icon'] }}"></i>
-                            </div>
-                            <h2 style="font-size: 2rem; font-weight: 800; color: #1e293b;">{{ $story['title'] }}</h2>
-                        </div>
-                        <p style="font-size: 1.125rem; line-height: 1.8; color: #475569;">
-                            {!! $story['content'] !!}
-                        </p>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
 <!-- Values Section -->
 <section class="section" style="background: #f8fafc;">
     <div class="container">
