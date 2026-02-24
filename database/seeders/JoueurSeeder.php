@@ -56,7 +56,7 @@ class JoueurSeeder extends Seeder
             ['prenom' => 'Abdou', 'nom' => 'Samb', 'poste' => 'Ailier fort', 'categorie_id' => $cadetsGarcons->id, 'numero' => 5, 'capitaine' => false, 'eloges' => 'Puissant et combatif, il apporte de l\'impact au rebond et dans la raquette.'],
             ['prenom' => 'Serigne Saliou', 'nom' => 'Gueye', 'poste' => 'Pivot', 'categorie_id' => $cadetsGarcons->id, 'numero' => 7, 'capitaine' => false, 'eloges' => 'Présence intérieure, protège le cercle et sécurise les rebonds.'],
             ['prenom' => 'Ablaye', 'nom' => 'Dione', 'poste' => 'Meneur', 'categorie_id' => $cadetsGarcons->id, 'numero' => 8, 'capitaine' => false, 'eloges' => 'Meneur organisé, donne le tempo et met ses coéquipiers dans les meilleures positions.'],
-            ['prenom' => 'Assana', 'nom' => 'Ndiaye', 'poste' => 'Meneur', 'categorie_id' => $cadetsGarcons->id, 'numero' => 9, 'capitaine' => false, 'eloges' => 'Meneur dynamique, bon défenseur sur la ligne arrière et très actif en transition.'],
+            ['prenom' => 'Assana', 'nom' => 'Ndiaye', 'poste' => 'Meneur', 'categorie_id' => $cadetsGarcons->id, 'numero' => 9, 'capitaine' => false, 'photo' => 'joueurs/ASSANA NDIAYE.jpeg', 'eloges' => 'Meneur dynamique, il met de l\'intensité en défense et donne du rythme à l\'équipe.'],
             ['prenom' => 'Babacar', 'nom' => 'Ngingue', 'poste' => 'Ailier', 'categorie_id' => $cadetsGarcons->id, 'numero' => 11, 'capitaine' => false, 'eloges' => 'Ailier polyvalent, utile des deux côtés du terrain avec une bonne activité.'],
 
             // Minimes Garçons
@@ -67,17 +67,19 @@ class JoueurSeeder extends Seeder
             ['prenom' => 'Serigne', 'nom' => 'Saliou', 'poste' => 'Ailier fort', 'categorie_id' => $minimesGarcons->id, 'numero' => 7, 'capitaine' => false, 'eloges' => 'Fort potentiel athlétique, très actif au rebond et en défense.'],
             ['prenom' => 'Birahim', 'nom' => 'Diba', 'poste' => 'Meneur', 'categorie_id' => $minimesGarcons->id, 'numero' => 9, 'capitaine' => false, 'eloges' => 'Meneur dynamique, capable d\'accélérer le jeu et de créer des décalages.'],
             ['prenom' => 'Pape', 'nom' => 'Maguette', 'poste' => 'Pivot', 'categorie_id' => $minimesGarcons->id, 'numero' => 10, 'capitaine' => false, 'eloges' => 'Présence intérieure fiable, bon finisseur près du cercle.'],
+            ['prenom' => 'Bamba', 'nom' => 'Bamba', 'poste' => 'Ailier', 'categorie_id' => $minimesGarcons->id, 'numero' => 12, 'capitaine' => false, 'photo' => 'joueurs/BAMBA.jpeg', 'eloges' => 'Ailier très volontaire, il apporte de l\'énergie, court beaucoup et se bat sur chaque ballon.'],
 
             // Minimes Filles
             // marta,bousso,thiendou2,nogaye,maman,fatima,yangane,oumou aw
             ['prenom' => 'Marta', 'nom' => 'Mendy', 'poste' => 'Meneuse', 'categorie_id' => $minimesFilles->id, 'numero' => 4, 'capitaine' => true, 'eloges' => 'Meneuse talentueuse avec une grande vision de jeu et un excellent dribble.'],
             ['prenom' => 'Bousso', 'nom' => 'Diop', 'poste' => 'Arrière', 'categorie_id' => $minimesFilles->id, 'numero' => 5, 'capitaine' => false, 'eloges' => 'Rapide et incisive, elle crée constamment le danger dans la défense adverse.'],
-            ['prenom' => 'Thiendou', 'nom' => 'Ndiaye', 'poste' => 'Ailière', 'categorie_id' => $minimesFilles->id, 'numero' => 6, 'capitaine' => false, 'eloges' => 'Joueuse complète avec une bonne technique individuelle et un sens du collectif.'],
+            ['prenom' => 'Fatoumata', 'nom' => 'Ndiaye', 'poste' => 'Ailière', 'categorie_id' => $minimesFilles->id, 'numero' => 6, 'capitaine' => false, 'photo' => 'joueurs/Thiendou ndiaye fille.jpg', 'eloges' => 'Joueuse appliquée et intelligente, elle combine vitesse, technique et esprit d\'équipe.'],
             ['prenom' => 'Nogaye', 'nom' => 'Ndiaye', 'poste' => 'Ailière forte', 'categorie_id' => $minimesFilles->id, 'numero' => 7, 'capitaine' => false, 'eloges' => 'Solide en défense et efficace au rebond, un pilier pour l\'équipe.'],
             ['prenom' => 'Maman', 'nom' => 'Diop', 'poste' => 'Meneuse', 'categorie_id' => $minimesFilles->id, 'numero' => 8, 'capitaine' => false, 'eloges' => 'Grande taille et bonne présence sous le panier, difficile à bouger.'],
             ['prenom' => 'Fatima', 'nom' => 'Sow', 'poste' => 'Arrière', 'categorie_id' => $minimesFilles->id, 'numero' => 9, 'capitaine' => false, 'eloges' => 'Très adroite à mi-distance et intelligente dans ses placements.'],
             ['prenom' => 'Yangane', 'nom' => 'Faye', 'poste' => 'Ailière', 'categorie_id' => $minimesFilles->id, 'numero' => 10, 'capitaine' => false, 'eloges' => 'Joueuse athlétique avec une grande endurance et une volonté de fer.'],
             ['prenom' => 'Oumou', 'nom' => 'Aw', 'poste' => 'Meneuse', 'categorie_id' => $minimesFilles->id, 'numero' => 11, 'capitaine' => false, 'eloges' => 'Excellente finisseuse près du cercle avec un bon sens du placement.'],
+            ['prenom' => 'Amina', 'nom' => 'Diop', 'poste' => 'Arrière', 'categorie_id' => $minimesFilles->id, 'numero' => 12, 'capitaine' => false, 'photo' => 'joueurs/AMINA DIOP.jpeg', 'eloges' => 'Arrière énergique et courageuse, elle met de la pression en défense et attaque le cercle avec détermination.'],
 
             // Cadettes Filles
             // yaye fatou dieng,aminata sarr,mamy sow,ndeye dieng,fayou dieng ,mame diarra diop,sally diome,mame fatou camara
@@ -97,9 +99,11 @@ class JoueurSeeder extends Seeder
                 || ($joueur['prenom'] === 'Pape' && $joueur['nom'] === 'Maguette')
             );
 
+            $hasPhotoPreset = array_key_exists('photo', $joueur) && $joueur['photo'];
+
             $photoFile = null;
 
-            if (!$forceNoPhoto) {
+            if (!$forceNoPhoto && !$hasPhotoPreset) {
                 $exactKey = $normalize($joueur['prenom'] . '-' . $joueur['nom']);
                 $photoFile = $photosByKey->get($exactKey);
 
@@ -117,7 +121,7 @@ class JoueurSeeder extends Seeder
                 ->filter()
                 ->values();
 
-            if (!$photoFile && !$forceNoPhoto) {
+            if (!$photoFile && !$forceNoPhoto && !$hasPhotoPreset) {
                 foreach ($searchNeedles as $needle) {
                     $photoFile = $photosByKey->first(function ($file, $key) use ($needle) {
                         return $key === $needle || str_contains($key, $needle);
@@ -138,13 +142,13 @@ class JoueurSeeder extends Seeder
                 }
             }
 
-            if (!$photoFile && !$forceNoPhoto) {
+            if (!$photoFile && !$forceNoPhoto && !$hasPhotoPreset) {
                 $photoFile = $photos->get($index);
             }
 
             if ($forceNoPhoto) {
                 $joueur['photo'] = null;
-            } elseif ($photoFile?->getFilename()) {
+            } elseif (!$hasPhotoPreset && $photoFile?->getFilename()) {
                 $joueur['photo'] = 'joueurs/' . $photoFile->getFilename();
             }
 
