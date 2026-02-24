@@ -111,4 +111,13 @@
     </div>
 </section>
 
+<!-- Credit Bar -->
+<div style="background: #1e293b; color: white; padding: 1rem 0; text-align: center; font-size: 0.875rem;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+        <p style="margin: 0; opacity: 0.9;">
+            <i class="fas fa-code" style="color: #fbbf24; margin-right: 0.5rem;"></i>
+            Site développé par <strong>Mohamed Fadel Fall</strong> — Développeur Junior
+        </p>
+    </div>
+</div>
 @endsection
