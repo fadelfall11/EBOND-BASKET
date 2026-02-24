@@ -12,9 +12,16 @@ class CategorieController extends Controller
      */
     public function index()
     {
-        $categories = Categorie::with('coach', 'joueurs')->get();
-        $categoriesGarcons = $categories->where('genre', 'garcon');
-        $categoriesFilles = $categories->where('genre', 'fille');
+        try {
+            $categories = Categorie::with('coach', 'joueurs')->get();
+            $categoriesGarcons = $categories->where('genre', 'garcon');
+            $categoriesFilles = $categories->where('genre', 'fille');
+        } catch (\Illuminate\Database\QueryException $e) {
+            // DB not reachable: return empty collections to avoid crash
+            $categories = collect();
+            $categoriesGarcons = collect();
+            $categoriesFilles = collect();
+        }
         
         return view('categories.index', compact('categories', 'categoriesGarcons', 'categoriesFilles'));
     }
@@ -24,9 +31,15 @@ class CategorieController extends Controller
      */
     public function show(Categorie $category)
     {
-        $category->load(['coach', 'joueurs' => function($query) {
-            $query->orderBy('capitaine', 'desc')->orderBy('numero');
-        }]);
+        try {
+            $category->load(['coach', 'joueurs' => function($query) {
+                $query->orderBy('capitaine', 'desc')->orderBy('numero');
+            }]);
+        } catch (\Illuminate\Database\QueryException $e) {
+            // DB not reachable: return empty relations to avoid crash
+            $category->setRelation('coach', null);
+            $category->setRelation('joueurs', collect());
+        }
         
         return view('categories.show', ['categorie' => $category]);
     }
