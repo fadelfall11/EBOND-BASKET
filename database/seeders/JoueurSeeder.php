@@ -31,6 +31,12 @@ class JoueurSeeder extends Seeder
             ->sortBy(fn($file) => mb_strtolower($file->getFilename()))
             ->values();
 
+        $photosByKey = $photos
+            ->mapWithKeys(function ($file) use ($normalize) {
+                $base = pathinfo($file->getFilename(), PATHINFO_FILENAME);
+                return [$normalize($base) => $file];
+            });
+
         // Nettoyer les joueurs existants pour ces catégories pour éviter les doublons
         Joueur::whereIn('categorie_id', [
             $minimesGarcons->id,
@@ -88,6 +94,9 @@ class JoueurSeeder extends Seeder
         foreach ($joueurs as $index => $joueur) {
             $photoFile = null;
 
+            $exactKey = $normalize($joueur['prenom'] . '-' . $joueur['nom']);
+            $photoFile = $photosByKey->get($exactKey);
+
             $searchNeedles = collect([
                 $joueur['prenom'] . ' ' . $joueur['nom'],
                 $joueur['nom'] . ' ' . $joueur['prenom'],
@@ -96,14 +105,15 @@ class JoueurSeeder extends Seeder
                 ->filter()
                 ->values();
 
-            foreach ($searchNeedles as $needle) {
-                $photoFile = $photos->first(function ($file) use ($normalize, $needle) {
-                    $haystack = $normalize(pathinfo($file->getFilename(), PATHINFO_FILENAME));
-                    return str_contains($haystack, $needle);
-                });
+            if (!$photoFile) {
+                foreach ($searchNeedles as $needle) {
+                    $photoFile = $photosByKey->first(function ($file, $key) use ($needle) {
+                        return $key === $needle || str_contains($key, $needle) || str_contains($needle, $key);
+                    });
 
-                if ($photoFile) {
-                    break;
+                    if ($photoFile) {
+                        break;
+                    }
                 }
             }
 
