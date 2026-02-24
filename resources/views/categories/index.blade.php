@@ -67,6 +67,13 @@
                                             <span class="value" style="color:#f59e0b;">{{ optional($categorie->joueurs->where('capitaine', true)->first())->full_name ?? '—' }}</span>
                                         </div>
                                     </div>
+
+                                    <div style="margin-top: 1.25rem; display: flex; justify-content: flex-end;">
+                                        <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.9rem; border-radius: 9999px; background: rgba(37, 99, 235, 0.12); color: #2563eb; font-weight: 700; font-size: 0.85rem; border: 1px solid rgba(37, 99, 235, 0.25);">
+                                            Voir
+                                            <i class="fas fa-arrow-right" style="font-size: 0.85rem;"></i>
+                                        </span>
+                                    </div>
                                 </div>
                             </a>
                         @endforeach
@@ -113,6 +120,13 @@
                                             <span class="label"><i class="fas fa-crown" style="color:#fbbf24;"></i> Capitaine</span>
                                             <span class="value" style="color:#f59e0b;">{{ optional($categorie->joueurs->where('capitaine', true)->first())->full_name ?? '—' }}</span>
                                         </div>
+                                    </div>
+
+                                    <div style="margin-top: 1.25rem; display: flex; justify-content: flex-end;">
+                                        <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.9rem; border-radius: 9999px; background: rgba(236, 72, 153, 0.12); color: #ec4899; font-weight: 700; font-size: 0.85rem; border: 1px solid rgba(236, 72, 153, 0.25);">
+                                            Voir
+                                            <i class="fas fa-arrow-right" style="font-size: 0.85rem;"></i>
+                                        </span>
                                     </div>
                                 </div>
                             </a>
