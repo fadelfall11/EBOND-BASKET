@@ -59,14 +59,12 @@ class JoueurSeeder extends Seeder
 
             // Minimes Garçons
             // papa idy omar sy,thierno konté,ousmane samb,serigne saliou,thierno,birahim diba,pape maguette,fallou
-            ['prenom' => 'Papa Idy Omar', 'nom' => 'Sy', 'poste' => 'Meneur', 'categorie_id' => $minimesGarcons->id, 'numero' => 4, 'capitaine' => true, 'eloges' => 'Jeune meneur prometteur avec une excellente maîtrise du ballon et une grande vivacité.'],
+            ['prenom' => 'Papa Idy Omar', 'nom' => 'Sy', 'poste' => 'Pivot', 'categorie_id' => $minimesGarcons->id, 'numero' => 4, 'capitaine' => true, 'eloges' => 'Grand et solide, il sécurise la raquette et apporte une présence importante au rebond.'],
             ['prenom' => 'Thierno', 'nom' => 'Konté', 'poste' => 'Arrière', 'categorie_id' => $minimesGarcons->id, 'numero' => 5, 'capitaine' => false, 'eloges' => 'Shooter naturel avec une mécanique de tir fluide et une grande précision.'],
-            ['prenom' => 'Ousmane', 'nom' => 'Samb', 'poste' => 'Ailier', 'categorie_id' => $minimesGarcons->id, 'numero' => 6, 'capitaine' => false, 'eloges' => 'Joueur énergique qui apporte beaucoup d\'intensité et de dynamisme sur le terrain.'],
+            ['prenom' => 'Ousmane', 'nom' => 'Samb', 'poste' => 'Meneur', 'categorie_id' => $minimesGarcons->id, 'numero' => 6, 'capitaine' => false, 'eloges' => 'Organise le jeu avec énergie et met du rythme en transition.'],
             ['prenom' => 'Serigne', 'nom' => 'Saliou', 'poste' => 'Ailier fort', 'categorie_id' => $minimesGarcons->id, 'numero' => 7, 'capitaine' => false, 'eloges' => 'Fort potentiel athlétique, très actif au rebond et en défense.'],
-            ['prenom' => 'Thierno', 'nom' => 'Diallo', 'poste' => 'Arrière', 'categorie_id' => $minimesGarcons->id, 'numero' => 8, 'capitaine' => false, 'eloges' => 'Joueur rapide en contre-attaque et très adroit en pénétration.'],
-            ['prenom' => 'Birahim', 'nom' => 'Diba', 'poste' => 'Pivot', 'categorie_id' => $minimesGarcons->id, 'numero' => 9, 'capitaine' => false, 'eloges' => 'Grand gabarit pour son âge, protecteur de cercle et bon finisseur.'],
-            ['prenom' => 'Pape', 'nom' => 'Maguette', 'poste' => 'Ailier', 'categorie_id' => $minimesGarcons->id, 'numero' => 10, 'capitaine' => false, 'eloges' => 'Joueur polyvalent capable de jouer à plusieurs postes avec efficacité.'],
-            ['prenom' => 'Fallou', 'nom' => 'Fall', 'poste' => 'Ailier fort', 'categorie_id' => $minimesGarcons->id, 'numero' => 11, 'capitaine' => false, 'eloges' => 'Combattant sur le terrain, ne lâche rien et motive ses coéquipiers.'],
+            ['prenom' => 'Birahim', 'nom' => 'Diba', 'poste' => 'Meneur', 'categorie_id' => $minimesGarcons->id, 'numero' => 9, 'capitaine' => false, 'eloges' => 'Meneur dynamique, capable d\'accélérer le jeu et de créer des décalages.'],
+            ['prenom' => 'Pape', 'nom' => 'Maguette', 'poste' => 'Pivot', 'categorie_id' => $minimesGarcons->id, 'numero' => 10, 'capitaine' => false, 'eloges' => 'Présence intérieure fiable, bon finisseur près du cercle.'],
 
             // Minimes Filles
             // marta,bousso,thiendou2,nogaye,maman,fatima,yangane,oumou aw
