@@ -31,11 +31,6 @@
                     'content' => "Dès ses débuts avec seulement <strong>15 jeunes passionnés</strong> dans un quartier de Dakar, l'école a connu une croissance remarquable. Grâce à des méthodes d'entraînement innovantes et une approche holistique du développement, nous sommes rapidement devenus une référence au Sénégal. Aujourd'hui, nous accueillons plus de <strong>120 jeunes</strong> répartis dans <strong>8 catégories</strong> différentes, des débutants aux seniors."
                 ],
                 [
-                    'icon' => 'fas fa-star',
-                    'title' => 'Les Réalisations',
-                    'content' => "Au fil des années, notre école a formé des dizaines de talents qui ont intégré des clubs professionnels au Sénégal, en Europe et même en <strong>NBA</strong>. Nous avons remporté de nombreux tournois nationaux et internationaux, mais notre plus grande fierté reste le développement personnel de chacun de nos joueurs. Nos valeurs de respect, de discipline et d'engagement sont au cœur de notre succès."
-                ],
-                [
                     'icon' => 'fas fa-eye',
                     'title' => 'Notre Vision',
                     'content' => "Notre vision est de devenir la <strong>meilleure école de basketball d'Afrique</strong>, non seulement en termes de performance sportive, mais aussi en tant que centre de développement humain. Nous voulons continuer à former non seulement d'excellents joueurs, mais aussi des <strong>leaders de demain</strong> qui porteront haut les couleurs du Sénégal sur et en dehors des terrains."
