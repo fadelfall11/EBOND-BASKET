@@ -53,7 +53,7 @@ class ActualiteSeeder extends Seeder
 
         $imageTournoi = $resolveImage(['tournoi-de-basket-feu-bassirou-faye', 'tournoi-bassirou-faye', 'bassirou-faye'], 0);
         $imageProgramme = $resolveImage(['nouveau-programme-de-developpement-pour-les-debutants', 'programme-developpement-debutants', 'programme-developpement'], 1);
-        $imageTerrains = $resolveImage(['inauguration-de-nos-nouveaux-terrains-modernes', 'inauguration-nouveaux-terrains', 'nouveaux-terrains'], 2);
+        $imageVictoireCadettes = $resolveImage(['victoire-des-cadettes-lors-de-la-finale-inter-ligue-contre-bambey', 'victoire-cadette', 'victoire-cadettes', 'cadettes-finale', 'finale-inter-ligue'], 2);
 
         $actualites = [
             [
@@ -79,15 +79,17 @@ class ActualiteSeeder extends Seeder
                 'auteur' => 'Service Communication'
             ],
             [
-                'titre' => 'Inauguration de nos nouveaux terrains modernes',
-                'contenu' => '<p>Nous sommes ravis d\'annoncer l\'inauguration officielle de nos nouveaux terrains de basketball équipés des dernières technologies. Ces installations de pointe comprennent deux terrains aux normes internationales, un système d\'éclairage LED et des gradins pour 500 spectateurs.</p>
-                
-                <p>La cérémonie d\'inauguration se déroulera le samedi prochain en présence des autorités locales, de parents d\'élèves et de partenaires de l\'école. Des démonstrations et des matchs d\'exhibition seront organisés pour marquer cet événement.</p>
-                
-                <p>Ces nouveaux terrains permettront à nos joueurs de s\'entraîner dans des conditions optimales et d\'accueillir des compétitions de haut niveau. Un grand merci à tous nos partenaires qui ont rendu ce projet possible.</p>',
-                'image' => $imageTerrains?->getFilename() ? ('actualites/' . $imageTerrains->getFilename()) : null,
+                'titre' => 'Victoire des Cadettes lors de la finale inter-ligue contre Bambey',
+                'contenu' => '<p>Nos cadettes ont réalisé une performance exceptionnelle en remportant la <strong>finale inter-ligue</strong> face à l\'équipe de <strong>Bambey</strong>. Dans une rencontre intense et engagée, nos joueuses ont su faire preuve de caractère, de discipline et d\'un esprit d\'équipe remarquable.</p>
+
+                <p>Dès l\'entame, le groupe a imposé son rythme grâce à une défense solide, une bonne circulation de balle et une grande combativité au rebond. Malgré plusieurs temps forts adverses, les cadettes ont gardé leur calme et ont su répondre dans les moments décisifs, avec des actions collectives bien construites et une réussite importante sur les phases de transition.</p>
+
+                <p>Cette victoire vient récompenser des semaines de travail, d\'assiduité et de rigueur à l\'entraînement. Elle témoigne aussi de la progression du groupe et du sérieux de notre projet de formation.</p>
+
+                <p>Félicitations à toutes les joueuses, au staff technique et aux supporters qui ont accompagné l\'équipe tout au long de la compétition. Nous continuons sur cette dynamique avec ambition et humilité.</p>',
+                'image' => $imageVictoireCadettes?->getFilename() ? ('actualites/' . $imageVictoireCadettes->getFilename()) : null,
                 'date_publication' => Carbon::now()->subWeeks(3),
-                'auteur' => 'Comité de Direction'
+                'auteur' => 'Service Communication'
             ]
         ];
 

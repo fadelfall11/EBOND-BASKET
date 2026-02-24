@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             CoachSeeder::class,
             CategorieSeeder::class,
             JoueurSeeder::class,
+            EmploiDuTempsSeeder::class,
             ActualiteSeeder::class,
         ]);
     }
