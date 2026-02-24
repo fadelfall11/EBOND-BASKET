@@ -24,8 +24,14 @@ if [ -n "$DATABASE_URL" ]; then
 fi
 
 # Create necessary directories
-mkdir -p storage/logs storage/framework/cache bootstrap/cache
+mkdir -p storage/logs storage/framework/cache bootstrap/cache storage/app/public
 chmod -R 755 storage bootstrap/cache
+
+# Create storage symbolic link for public files (photos)
+if [ ! -L "public/storage" ]; then
+    echo "🔗 Creating storage symbolic link..."
+    php artisan storage:link
+fi
 
 # Clear caches to avoid stale config pointing to localhost
 php artisan optimize:clear --quiet 2>/dev/null || true
