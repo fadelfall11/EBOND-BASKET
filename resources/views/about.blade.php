@@ -110,6 +110,15 @@
                             <span>{{ $coach->experience }} ans d'expérience</span>
                         </div>
                         <p class="card-text" style="text-align: left;">{{ Str::limit($coach->bio, 120) }}</p>
+
+                        @if(Str::lower(Str::ascii($coach->prenom . ' ' . $coach->nom)) === 'alioune ndiaye')
+                            <div style="margin-top: 1.25rem; display: flex; justify-content: center;">
+                                <a href="{{ route('about') }}#coach-alioune-ndiaye" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.1rem; border-radius: 9999px; background: rgba(37, 99, 235, 0.12); color: #2563eb; font-weight: 700; font-size: 0.9rem; border: 1px solid rgba(37, 99, 235, 0.25); text-decoration: none;">
+                                    Voir plus
+                                    <i class="fas fa-arrow-right" style="font-size: 0.9rem;"></i>
+                                </a>
+                            </div>
+                        @endif
                     </div>
                 </div>
             @empty
@@ -121,6 +130,24 @@
                 </div>
             @endforelse
         </div>
+
+        @if($coaches->contains(fn($c) => Str::lower(Str::ascii($c->prenom . ' ' . $c->nom)) === 'alioune ndiaye'))
+            <div id="coach-alioune-ndiaye" style="margin-top: 4rem; padding-top: 1rem;">
+                <div class="section-header" style="margin-bottom: 2rem; text-align: left;">
+                    <h3 class="section-title" style="font-size: 1.75rem;">Alioune Ndiaye — Voir plus</h3>
+                    <p class="section-subtitle" style="max-width: 900px;">
+                        Galerie photos : Alioune Ndiaye avec nos jeunes talents
+                    </p>
+                </div>
+
+                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.25rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; color: #64748b;">
+                        <i class="fas fa-images" style="color: #2563eb;"></i>
+                        <span>Ajoute tes photos dans <strong>public/images/coaches/alioune-ndiaye</strong> et on les affichera ici.</span>
+                    </div>
+                </div>
+            </div>
+        @endif
     </div>
 </section>
 
