@@ -92,14 +92,21 @@ class JoueurSeeder extends Seeder
         ];
 
         foreach ($joueurs as $index => $joueur) {
+            $forceNoPhoto = (
+                ($joueur['prenom'] === 'Birahim' && $joueur['nom'] === 'Diba')
+                || ($joueur['prenom'] === 'Pape' && $joueur['nom'] === 'Maguette')
+            );
+
             $photoFile = null;
 
-            $exactKey = $normalize($joueur['prenom'] . '-' . $joueur['nom']);
-            $photoFile = $photosByKey->get($exactKey);
+            if (!$forceNoPhoto) {
+                $exactKey = $normalize($joueur['prenom'] . '-' . $joueur['nom']);
+                $photoFile = $photosByKey->get($exactKey);
 
-            if (!$photoFile) {
-                $collapsedExactKey = $collapseRepeats($exactKey);
-                $photoFile = $photosByKey->get($collapsedExactKey);
+                if (!$photoFile) {
+                    $collapsedExactKey = $collapseRepeats($exactKey);
+                    $photoFile = $photosByKey->get($collapsedExactKey);
+                }
             }
 
             $searchNeedles = collect([
@@ -110,7 +117,7 @@ class JoueurSeeder extends Seeder
                 ->filter()
                 ->values();
 
-            if (!$photoFile) {
+            if (!$photoFile && !$forceNoPhoto) {
                 foreach ($searchNeedles as $needle) {
                     $photoFile = $photosByKey->first(function ($file, $key) use ($needle) {
                         return $key === $needle || str_contains($key, $needle);
@@ -131,11 +138,13 @@ class JoueurSeeder extends Seeder
                 }
             }
 
-            if (!$photoFile) {
+            if (!$photoFile && !$forceNoPhoto) {
                 $photoFile = $photos->get($index);
             }
 
-            if ($photoFile?->getFilename()) {
+            if ($forceNoPhoto) {
+                $joueur['photo'] = null;
+            } elseif ($photoFile?->getFilename()) {
                 $joueur['photo'] = 'joueurs/' . $photoFile->getFilename();
             }
 
