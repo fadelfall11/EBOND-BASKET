@@ -15,6 +15,66 @@
     </div>
 </section>
 
+<!-- Leadership Section -->
+<section class="section" style="background: #f8fafc;">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Notre Leadership</h2>
+            <p class="section-subtitle">
+                Les visionnaires qui font la grandeur de EBOND
+            </p>
+        </div>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-image" style="height: 350px; padding: 0; overflow: hidden; position: relative;">
+                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #1e40af, #2563eb); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-crown" style="font-size: 5rem; color: rgba(255,255,255,0.5);"></i>
+                    </div>
+                </div>
+                <div class="card-content" style="text-align: center;">
+                    <h3 class="card-title" style="margin-bottom: 0.5rem;">Dieylani Kebe</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="badge" style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 9999px; font-weight: 600; font-size: 0.875rem;">
+                            Fondateur & Entraîneur Principal
+                        </span>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 1.5rem; color: #64748b;">
+                        <i class="fas fa-award" style="color: #fbbf24;"></i>
+                        <span>26 ans d'expérience</span>
+                    </div>
+                    <p class="card-text" style="text-align: left;">
+                        Visionnaire passionné, Dieylani Kebe est le fondateur de EBOND. Avec plus de deux décennies d'expérience, il a su créer une école de basket de référence au Sénégal. Son expertise technique et sa capacité à développer les talents font de lui un mentor respecté qui a formé des générations de joueurs d'excellence.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image" style="height: 350px; padding: 0; overflow: hidden; position: relative;">
+                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #ec4899, #f472b6); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-star" style="font-size: 5rem; color: rgba(255,255,255,0.5);"></i>
+                    </div>
+                </div>
+                <div class="card-content" style="text-align: center;">
+                    <h3 class="card-title" style="margin-bottom: 0.5rem;">Ababacar Ndiaye</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="badge" style="background: #fce7f3; color: #ec4899; padding: 0.25rem 0.75rem; border-radius: 9999px; font-weight: 600; font-size: 0.875rem;">
+                            Président de Ligue de Basket de Diourbel
+                        </span>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 1.5rem; color: #64748b;">
+                        <i class="fas fa-trophy" style="color: #fbbf24;"></i>
+                        <span>Leader Dynamique</span>
+                    </div>
+                    <p class="card-text" style="text-align: left;">
+                        Jeune leader sérieux et dynamique, Ababacar Ndiaye est un passionné qui ne vit que pour le basket diourbelois. Son engagement sans faille pour le développement du basketball dans la région de Diourbel fait de lui un acteur incontournable. Il incarne la nouvelle génération de dirigeants qui allient modernité et valeurs traditionnelles.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Coaches Section -->
 <section class="section">
     <div class="container">
