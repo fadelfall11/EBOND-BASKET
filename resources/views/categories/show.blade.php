@@ -111,24 +111,4 @@
     </div>
 </section>
 
-@if($categorie->description)
-<!-- Description Section -->
-<section class="section" style="background: #f8fafc;">
-    <div class="container">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <div class="card">
-                <div class="card-content">
-                    <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem; color: #1e293b;">
-                        <i class="fas fa-info-circle" style="color: {{ $categorie->genre == 'garcon' ? '#2563eb' : '#ec4899' }};"></i>
-                        À propos de cette catégorie
-                    </h2>
-                    <div style="font-size: 1.125rem; line-height: 1.8; color: #475569;">
-                        {!! $categorie->description !!}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-@endif
 @endsection
