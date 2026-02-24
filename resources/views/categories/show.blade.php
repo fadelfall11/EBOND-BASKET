@@ -112,12 +112,25 @@
 </section>
 
 <!-- Credit Bar -->
-<div style="background: #1e293b; color: white; padding: 1rem 0; text-align: center; font-size: 0.875rem;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
-        <p style="margin: 0; opacity: 0.9;">
-            <i class="fas fa-code" style="color: #fbbf24; margin-right: 0.5rem;"></i>
-            Site développé par <strong>Mohamed Fadel Fall</strong> — Développeur Junior
-        </p>
+<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-top: 1px solid #334155; color: white; padding: 1.5rem 0; text-align: center; font-size: 0.875rem; position: relative; overflow: hidden;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem; position: relative; z-index: 2;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fas fa-code" style="color: #fbbf24; font-size: 1rem;"></i>
+                <span style="color: #94a3b8; font-weight: 400;">Développé par</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <strong style="color: #f1f5f9; font-weight: 600; font-size: 0.95rem;">Mohamed Fadel Fall</strong>
+                <span style="background: rgba(251, 191, 36, 0.2); color: #fbbf24; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 500; border: 1px solid rgba(251, 191, 36, 0.3);">
+                    Junior Developer
+                </span>
+            </div>
+        </div>
+        <div style="margin-top: 0.5rem; color: #64748b; font-size: 0.75rem;">
+            © {{ date('Y') }} EBOND Basket — Tous droits réservés
+        </div>
     </div>
+    <!-- Subtle animated pattern -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.05; background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); background-size: 60px 60px; pointer-events: none;"></div>
 </div>
 @endsection
