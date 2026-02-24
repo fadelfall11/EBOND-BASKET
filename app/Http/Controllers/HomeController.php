@@ -10,8 +10,14 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $categories = Categorie::with('coach')->get();
-        $actualites = Actualite::latest()->take(3)->get();
+        try {
+            $categories = Categorie::with('coach')->get();
+            $actualites = Actualite::latest()->take(3)->get();
+        } catch (\Illuminate\Database\QueryException $e) {
+            // DB not reachable: return empty collections to avoid crash
+            $categories = collect();
+            $actualites = collect();
+        }
         
         return view('home', compact('categories', 'actualites'));
     }

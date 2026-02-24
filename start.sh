@@ -42,6 +42,16 @@ else
     echo "⚠️  Migrations failed or database not available - starting anyway"
 fi
 
+# If migrations failed, fallback to SQLite to allow the site to run
+if [ $? -ne 0 ]; then
+    echo "🛠️ Falling back to SQLite to avoid DB connection errors..."
+    export DB_CONNECTION=sqlite
+    export DB_DATABASE=database/database.sqlite
+    mkdir -p database
+    touch database/database.sqlite
+    php artisan migrate --force --quiet 2>/dev/null || true
+fi
+
 
 # Avoid caching config/routes here; Railway env can differ and caching can freeze a bad DB host
 
