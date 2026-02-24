@@ -52,13 +52,12 @@ class JoueurSeeder extends Seeder
         $joueurs = [
             // Cadets Garçons
             // cherif alwely diop,abdou samb,pape malick ngom,serigne saliou gueye,ablaye dione,assana ndiaye,pape,babacar ngingue
-            ['prenom' => 'Cherif Alwely', 'nom' => 'Diop', 'poste' => 'Meneur', 'categorie_id' => $cadetsGarcons->id, 'numero' => 4, 'capitaine' => true, 'eloges' => 'Meneur visionnaire avec une excellente lecture du jeu et un leadership naturel.'],
-            ['prenom' => 'Abdou', 'nom' => 'Samb', 'poste' => 'Arrière', 'categorie_id' => $cadetsGarcons->id, 'numero' => 5, 'capitaine' => false, 'eloges' => 'Arrière rapide et adroit, capable de percer les défenses adverses avec facilité.'],
-            ['prenom' => 'Pape Malick', 'nom' => 'Ngom', 'poste' => 'Ailier', 'categorie_id' => $cadetsGarcons->id, 'numero' => 6, 'capitaine' => false, 'eloges' => 'Ailier polyvalent doté d\'une grande agilité et d\'un tir fiable à mi-distance.'],
-            ['prenom' => 'Serigne Saliou', 'nom' => 'Gueye', 'poste' => 'Ailier fort', 'categorie_id' => $cadetsGarcons->id, 'numero' => 7, 'capitaine' => false, 'eloges' => 'Joueur physique et combatif, excellent rebondeur et défenseur tenace.'],
-            ['prenom' => 'Ablaye', 'nom' => 'Dione', 'poste' => 'Pivot', 'categorie_id' => $cadetsGarcons->id, 'numero' => 8, 'capitaine' => false, 'eloges' => 'Pivot dominant dans la raquette, impérial au contre et solide au poste bas.'],
-            ['prenom' => 'Assana', 'nom' => 'Ndiaye', 'poste' => 'Arrière', 'categorie_id' => $cadetsGarcons->id, 'numero' => 9, 'capitaine' => false, 'eloges' => 'Défenseur infatigable avec une grande intelligence de jeu et un esprit collectif.'],
-            ['prenom' => 'Babacar', 'nom' => 'Ngingue', 'poste' => 'Pivot', 'categorie_id' => $cadetsGarcons->id, 'numero' => 11, 'capitaine' => false, 'eloges' => 'Intérieur technique avec de bons mouvements et une présence rassurante sous le panier.'],
+            ['prenom' => 'Cherif Alwely', 'nom' => 'Diop', 'poste' => 'Arrière', 'categorie_id' => $cadetsGarcons->id, 'numero' => 4, 'capitaine' => true, 'eloges' => 'Arrière complet, capable de défendre fort et de créer des solutions offensives.'],
+            ['prenom' => 'Abdou', 'nom' => 'Samb', 'poste' => 'Ailier fort', 'categorie_id' => $cadetsGarcons->id, 'numero' => 5, 'capitaine' => false, 'eloges' => 'Puissant et combatif, il apporte de l\'impact au rebond et dans la raquette.'],
+            ['prenom' => 'Serigne Saliou', 'nom' => 'Gueye', 'poste' => 'Pivot', 'categorie_id' => $cadetsGarcons->id, 'numero' => 7, 'capitaine' => false, 'eloges' => 'Présence intérieure, protège le cercle et sécurise les rebonds.'],
+            ['prenom' => 'Ablaye', 'nom' => 'Dione', 'poste' => 'Meneur', 'categorie_id' => $cadetsGarcons->id, 'numero' => 8, 'capitaine' => false, 'eloges' => 'Meneur organisé, donne le tempo et met ses coéquipiers dans les meilleures positions.'],
+            ['prenom' => 'Assana', 'nom' => 'Ndiaye', 'poste' => 'Meneur', 'categorie_id' => $cadetsGarcons->id, 'numero' => 9, 'capitaine' => false, 'eloges' => 'Meneur dynamique, bon défenseur sur la ligne arrière et très actif en transition.'],
+            ['prenom' => 'Babacar', 'nom' => 'Ngingue', 'poste' => 'Ailier', 'categorie_id' => $cadetsGarcons->id, 'numero' => 11, 'capitaine' => false, 'eloges' => 'Ailier polyvalent, utile des deux côtés du terrain avec une bonne activité.'],
 
             // Minimes Garçons
             // papa idy omar sy,thierno konté,ousmane samb,serigne saliou,thierno,birahim diba,pape maguette,fallou
@@ -71,7 +70,7 @@ class JoueurSeeder extends Seeder
 
             // Minimes Filles
             // marta,bousso,thiendou2,nogaye,maman,fatima,yangane,oumou aw
-            ['prenom' => 'Marta', 'nom' => 'Gomis', 'poste' => 'Meneuse', 'categorie_id' => $minimesFilles->id, 'numero' => 4, 'capitaine' => true, 'eloges' => 'Meneuse talentueuse avec une grande vision de jeu et un excellent dribble.'],
+            ['prenom' => 'Marta', 'nom' => 'Mendy', 'poste' => 'Meneuse', 'categorie_id' => $minimesFilles->id, 'numero' => 4, 'capitaine' => true, 'eloges' => 'Meneuse talentueuse avec une grande vision de jeu et un excellent dribble.'],
             ['prenom' => 'Bousso', 'nom' => 'Diop', 'poste' => 'Arrière', 'categorie_id' => $minimesFilles->id, 'numero' => 5, 'capitaine' => false, 'eloges' => 'Rapide et incisive, elle crée constamment le danger dans la défense adverse.'],
             ['prenom' => 'Thiendou', 'nom' => 'Ndiaye', 'poste' => 'Ailière', 'categorie_id' => $minimesFilles->id, 'numero' => 6, 'capitaine' => false, 'eloges' => 'Joueuse complète avec une bonne technique individuelle et un sens du collectif.'],
             ['prenom' => 'Nogaye', 'nom' => 'Ndiaye', 'poste' => 'Ailière forte', 'categorie_id' => $minimesFilles->id, 'numero' => 7, 'capitaine' => false, 'eloges' => 'Solide en défense et efficace au rebond, un pilier pour l\'équipe.'],
@@ -114,7 +113,7 @@ class JoueurSeeder extends Seeder
             if (!$photoFile) {
                 foreach ($searchNeedles as $needle) {
                     $photoFile = $photosByKey->first(function ($file, $key) use ($needle) {
-                        return $key === $needle || str_contains($key, $needle) || str_contains($needle, $key);
+                        return $key === $needle || str_contains($key, $needle);
                     });
 
                     if ($photoFile) {
@@ -123,7 +122,7 @@ class JoueurSeeder extends Seeder
 
                     $collapsedNeedle = $collapseRepeats($needle);
                     $photoFile = $photosByKey->first(function ($file, $key) use ($collapsedNeedle) {
-                        return $key === $collapsedNeedle || str_contains($key, $collapsedNeedle) || str_contains($collapsedNeedle, $key);
+                        return $key === $collapsedNeedle || str_contains($key, $collapsedNeedle);
                     });
 
                     if ($photoFile) {
