@@ -6,6 +6,7 @@ use App\Models\Coach;
 use App\Models\Categorie;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\File;
 
 class CategorieSeeder extends Seeder
 {
@@ -18,6 +19,10 @@ class CategorieSeeder extends Seeder
         $coachThiendou = Coach::where('nom', 'Ndiaye')->where('prenom', 'Thiendou')->firstOrFail();
         $coachAwa = Coach::where('nom', 'Séne')->where('prenom', 'Awa')->firstOrFail();
 
+        $photos = collect(File::files(public_path('images/categories')))
+            ->filter(fn($file) => !preg_match('/\s/', $file->getFilename()))
+            ->values();
+
         Categorie::where('nom', 'Seniors')->delete();
 
         $categories = [
@@ -27,6 +32,7 @@ class CategorieSeeder extends Seeder
                 'age_min' => 10,
                 'age_max' => 13,
                 'coach_id' => $coachThiendou->id,
+                'photo' => $photos->get(0)?->getFilename() ? ('categories/' . $photos->get(0)->getFilename()) : null,
                 'description' => 'Développement des techniques fondamentales et compréhension tactique du jeu. Préparation aux compétitions régionales avec accent sur le perfectionnement individuel.'
             ],
             [
@@ -35,6 +41,7 @@ class CategorieSeeder extends Seeder
                 'age_min' => 14,
                 'age_max' => 17,
                 'coach_id' => $coachThiendou->id,
+                'photo' => $photos->get(1)?->getFilename() ? ('categories/' . $photos->get(1)->getFilename()) : null,
                 'description' => 'Formation avancée avec préparation aux compétitions nationales. Travail sur la condition physique, les stratégies complexes et le leadership.'
             ],
             [
@@ -43,6 +50,7 @@ class CategorieSeeder extends Seeder
                 'age_min' => 10,
                 'age_max' => 13,
                 'coach_id' => $coachAwa->id,
+                'photo' => $photos->get(2)?->getFilename() ? ('categories/' . $photos->get(2)->getFilename()) : null,
                 'description' => 'Développement des compétences techniques et tactiques pour les jeunes joueuses. Préparation aux tournois féminins avec accent sur le jeu collectif.'
             ],
             [
@@ -51,6 +59,7 @@ class CategorieSeeder extends Seeder
                 'age_min' => 14,
                 'age_max' => 17,
                 'coach_id' => $coachAwa->id,
+                'photo' => $photos->get(3)?->getFilename() ? ('categories/' . $photos->get(3)->getFilename()) : null,
                 'description' => 'Formation intensive pour les adolescentes talentueuses. Préparation aux sélections nationales et développement du leadership féminin.'
             ]
         ];

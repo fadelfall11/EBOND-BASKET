@@ -6,6 +6,7 @@ use App\Models\Categorie;
 use App\Models\Joueur;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\File;
 
 class JoueurSeeder extends Seeder
 {
@@ -18,6 +19,10 @@ class JoueurSeeder extends Seeder
         $cadetsGarcons = Categorie::where('nom', 'Cadets')->where('genre', 'garcon')->firstOrFail();
         $minimesFilles = Categorie::where('nom', 'Minimes Filles')->where('genre', 'fille')->firstOrFail();
         $cadettesFilles = Categorie::where('nom', 'Cadettes')->where('genre', 'fille')->firstOrFail();
+
+        $photos = collect(File::files(public_path('images/joueurs')))
+            ->filter(fn($file) => !preg_match('/\s/', $file->getFilename()))
+            ->values();
 
         // Nettoyer les joueurs existants pour ces catégories pour éviter les doublons
         Joueur::whereIn('categorie_id', [
@@ -73,8 +78,19 @@ class JoueurSeeder extends Seeder
             ['prenom' => 'Mame Fatou', 'nom' => 'Camara', 'poste' => 'Pivot', 'categorie_id' => $cadettesFilles->id, 'numero' => 11, 'capitaine' => false, 'eloges' => 'Force de la nature sous les panneaux, intimidatrice en défense.'],
         ];
 
-        foreach ($joueurs as $joueur) {
-            Joueur::create($joueur);
+        foreach ($joueurs as $index => $joueur) {
+            $photoFile = $photos->get($index);
+            if ($photoFile?->getFilename()) {
+                $joueur['photo'] = 'joueurs/' . $photoFile->getFilename();
+            }
+
+            Joueur::updateOrCreate(
+                [
+                    'categorie_id' => $joueur['categorie_id'],
+                    'numero' => $joueur['numero'],
+                ],
+                $joueur
+            );
         }
     }
 }
