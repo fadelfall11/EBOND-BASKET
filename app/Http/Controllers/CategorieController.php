@@ -17,6 +17,7 @@ class CategorieController extends Controller
             $categoriesGarcons = $categories->where('genre', 'garcon');
             $categoriesFilles = $categories->where('genre', 'fille');
         } catch (\Illuminate\Database\QueryException $e) {
+            report($e);
             // DB not reachable: return empty collections to avoid crash
             $categories = collect();
             $categoriesGarcons = collect();
@@ -36,6 +37,7 @@ class CategorieController extends Controller
                 $query->orderBy('capitaine', 'desc')->orderBy('numero');
             }]);
         } catch (\Illuminate\Database\QueryException $e) {
+            report($e);
             // DB not reachable: return empty relations to avoid crash
             $category->setRelation('coach', null);
             $category->setRelation('joueurs', collect());
