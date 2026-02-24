@@ -37,8 +37,7 @@ class Joueur extends Model
 
     public function getPhotoStyleAttribute()
     {
-        // Si la position est 'center' (valeur par défaut) ou null, on force 'top' pour les portraits
-        $position = (!$this->photo_position || $this->photo_position === 'center') ? 'top' : $this->photo_position;
+        $position = $this->photo_position ?: 'center';
         return "object-fit: cover; object-position: {$position};";
     }
 }
