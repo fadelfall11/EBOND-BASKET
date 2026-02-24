@@ -131,28 +131,4 @@
     </div>
 </section>
 @endif
-
-<!-- CTA Section -->
-<section class="hero" style="padding: 6rem 0; background: linear-gradient(135deg, {{ $categorie->genre == 'garcon' ? '#1e40af' : '#ec4899' }} 0%, {{ $categorie->genre == 'garcon' ? '#2563eb' : '#f472b6' }} 100%);">
-    <div class="container">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: white; margin-bottom: 1.5rem;">
-                Intéressé(e) par cette catégorie ?
-            </h2>
-            <p style="font-size: 1.25rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2.5rem;">
-                Contactez notre coach pour plus d'informations sur les inscriptions
-            </p>
-            <div class="hero-buttons" style="justify-content: center;">
-                <a href="mailto:{{ $categorie->coach?->email ?? 'contact@ebond.sn' }}" class="btn-white">
-                    <i class="fas fa-envelope"></i>
-                    Contacter le coach
-                </a>
-                <a href="{{ route('categories.index') }}" class="btn-outline">
-                    <i class="fas fa-list"></i>
-                    Voir autres catégories
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
 @endsection
