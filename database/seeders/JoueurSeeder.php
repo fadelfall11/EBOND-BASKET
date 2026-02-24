@@ -20,8 +20,15 @@ class JoueurSeeder extends Seeder
         $minimesFilles = Categorie::where('nom', 'Minimes Filles')->where('genre', 'fille')->firstOrFail();
         $cadettesFilles = Categorie::where('nom', 'Cadettes')->where('genre', 'fille')->firstOrFail();
 
+        $normalize = static function (string $value): string {
+            $value = mb_strtolower($value);
+            $value = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $value) ?: $value;
+            $value = preg_replace('/[^a-z0-9]+/i', '-', $value);
+            return trim((string) $value, '-');
+        };
+
         $photos = collect(File::files(public_path('images/joueurs')))
-            ->filter(fn($file) => !preg_match('/\s/', $file->getFilename()))
+            ->sortBy(fn($file) => mb_strtolower($file->getFilename()))
             ->values();
 
         // Nettoyer les joueurs existants pour ces catégories pour éviter les doublons
@@ -79,7 +86,31 @@ class JoueurSeeder extends Seeder
         ];
 
         foreach ($joueurs as $index => $joueur) {
-            $photoFile = $photos->get($index);
+            $photoFile = null;
+
+            $searchNeedles = collect([
+                $joueur['prenom'] . ' ' . $joueur['nom'],
+                $joueur['nom'] . ' ' . $joueur['prenom'],
+            ])
+                ->map(fn($v) => $normalize($v))
+                ->filter()
+                ->values();
+
+            foreach ($searchNeedles as $needle) {
+                $photoFile = $photos->first(function ($file) use ($normalize, $needle) {
+                    $haystack = $normalize(pathinfo($file->getFilename(), PATHINFO_FILENAME));
+                    return str_contains($haystack, $needle);
+                });
+
+                if ($photoFile) {
+                    break;
+                }
+            }
+
+            if (!$photoFile) {
+                $photoFile = $photos->get($index);
+            }
+
             if ($photoFile?->getFilename()) {
                 $joueur['photo'] = 'joueurs/' . $photoFile->getFilename();
             }
