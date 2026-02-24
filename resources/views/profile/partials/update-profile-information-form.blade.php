@@ -28,7 +28,7 @@
 
             @if($user->photo)
                 <div class="mt-2">
-                    <img src="{{ asset('storage/' . $user->photo) }}" alt="{{ $user->name }}" class="h-24 w-24 rounded-full object-cover" style="object-position: {{ $user->photo_position ?? 'center' }};" />
+                    <img src="{{ asset('images/' . $user->photo) }}" alt="{{ $user->name }}" class="h-24 w-24 rounded-full object-cover" style="object-position: {{ $user->photo_position ?? 'center' }};" />
                 </div>
             @endif
 

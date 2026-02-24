@@ -41,7 +41,7 @@
                         @foreach ($categoriesGarcons as $categorie)
                             <div class="card">
                                 @if($categorie->photo)
-                                    <img src="{{ asset('storage/' . $categorie->photo) }}" alt="{{ $categorie->nom }}" class="card-image" style="{{ $categorie->photo_style }}">
+                                    <img src="{{ asset('images/' . $categorie->photo) }}" alt="{{ $categorie->nom }}" class="card-image" style="{{ $categorie->photo_style }}">
                                 @else
                                     <div class="card-image" style="background: linear-gradient(135deg, #2563eb, #3b82f6); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                                         <i class="fas fa-basketball-ball"></i>
@@ -100,7 +100,7 @@
                         @foreach ($categoriesFilles as $categorie)
                             <div class="card">
                                 @if($categorie->photo)
-                                    <img src="{{ asset('storage/' . $categorie->photo) }}" alt="{{ $categorie->nom }}" class="card-image" style="{{ $categorie->photo_style }}">
+                                    <img src="{{ asset('images/' . $categorie->photo) }}" alt="{{ $categorie->nom }}" class="card-image" style="{{ $categorie->photo_style }}">
                                 @else
                                     <div class="card-image" style="background: linear-gradient(135deg, #ec4899, #f472b6); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                                         <i class="fas fa-basketball-ball"></i>

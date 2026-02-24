@@ -33,7 +33,7 @@
 <section class="section" style="padding-top: 0;">
     <div class="container">
         <div style="max-width: 1000px; margin: 0 auto;">
-            <img src="{{ asset('storage/' . $actualite->image) }}" alt="{{ $actualite->titre }}" 
+            <img src="{{ asset('images/' . $actualite->image) }}" alt="{{ $actualite->titre }}" 
                  style="width: 100%; height: auto; display: block; border-radius: 20px; box-shadow: 0 20px 25px rgba(0,0,0,0.1);">
         </div>
     </div>
@@ -92,7 +92,7 @@
             @foreach ($actualitesRecentes as $article)
                 <div class="card">
                     @if($article->image)
-                        <img src="{{ asset('storage/' . $article->image) }}" alt="{{ $article->titre }}" style="width: 100%; height: auto; display: block;">
+                        <img src="{{ asset('images/' . $article->image) }}" alt="{{ $article->titre }}" style="width: 100%; height: auto; display: block;">
                     @else
                         <div class="card-image" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2563eb, #3b82f6); color: white; font-size: 3rem;">
                             <i class="fas fa-newspaper"></i>

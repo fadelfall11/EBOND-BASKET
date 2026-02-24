@@ -50,7 +50,7 @@
                         @if($actualite->image)
                             <div style="margin-bottom:1rem;">
                                 <div style="font-weight:600; color:#334155; margin-bottom:0.5rem;">Image actuelle</div>
-                                <img src="{{ asset('storage/' . $actualite->image) }}" alt="{{ $actualite->titre }}" style="max-width: 100%; height: 260px; object-fit: cover; border-radius: 16px; border:1px solid #e2e8f0;">
+                                <img src="{{ asset('images/' . $actualite->image) }}" alt="{{ $actualite->titre }}" style="max-width: 100%; height: 260px; object-fit: cover; border-radius: 16px; border:1px solid #e2e8f0;">
                             </div>
                         @endif
 

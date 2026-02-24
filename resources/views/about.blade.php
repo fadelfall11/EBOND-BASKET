@@ -103,7 +103,7 @@
                 <div class="card">
                     <div class="card-image" style="height: 350px; padding: 0; overflow: hidden; position: relative;">
                         @if($coach->photo)
-                            <img src="{{ asset('storage/' . $coach->photo) }}" alt="{{ $coach->prenom }} {{ $coach->nom }}" 
+                            <img src="{{ asset('images/' . $coach->photo) }}" alt="{{ $coach->prenom }} {{ $coach->nom }}" 
                                  style="width: 100%; height: 100%; object-fit: cover; {{ $coach->photo_style }}">
                         @else
                             <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #2563eb, #3b82f6); display: flex; align-items: center; justify-content: center;">

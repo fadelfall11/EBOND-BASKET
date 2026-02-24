@@ -31,7 +31,7 @@
                 @foreach ($actualites as $actualite)
                     <div class="card">
                         @if($actualite->image)
-                            <img src="{{ asset('storage/' . $actualite->image) }}" alt="{{ $actualite->titre }}" style="width: 100%; height: auto; display: block;">
+                            <img src="{{ asset('images/' . $actualite->image) }}" alt="{{ $actualite->titre }}" style="width: 100%; height: auto; display: block;">
                         @else
                             <div class="card-image" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2563eb, #3b82f6); color: white; font-size: 3rem;">
                                 <i class="fas fa-newspaper"></i>

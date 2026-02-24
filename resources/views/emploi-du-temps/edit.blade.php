@@ -15,7 +15,7 @@
                 <div class="card-content">
                     <h2 class="card-title" style="margin-bottom: 2rem;">Modifier l'entraînement</h2>
                     
-                    <form action="{{ route('emploi-du-temps.update', $emploiDuTemps) }}" method="POST">
+                    <form action="{{ url('/emploi-du-temps/'.$emploiDuTemps->id) }}" method="POST">
                         @csrf
                         @method('PUT')
                         

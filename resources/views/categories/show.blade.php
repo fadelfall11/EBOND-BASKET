@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="hero" style="{{ $categorie->photo ? "background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('" . asset('storage/' . $categorie->photo) . "'); background-size: cover; background-position: " . ($categorie->photo_position ?? 'center') . ";" : "background: linear-gradient(135deg, " . ($categorie->genre == 'garcon' ? '#1e40af' : '#ec4899') . " 0%, " . ($categorie->genre == 'garcon' ? '#2563eb' : '#f472b6') . " 100%);" }}">
+<section class="hero" style="{{ $categorie->photo ? "background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('" . asset('images/' . $categorie->photo) . "'); background-size: cover; background-position: " . ($categorie->photo_position ?? 'center') . ";" : "background: linear-gradient(135deg, " . ($categorie->genre == 'garcon' ? '#1e40af' : '#ec4899') . " 0%, " . ($categorie->genre == 'garcon' ? '#2563eb' : '#f472b6') . " 100%);" }}">
     <div class="hero-content">
         <div class="animate-fade-in-up">
             <h1 class="hero-title">
@@ -22,7 +22,7 @@
                 <!-- Photo -->
                 <div style="height: 350px; overflow: hidden; background: #f8fafc; position: relative;">
                     @if($categorie->coach && $categorie->coach->photo)
-                         <img src="{{ asset('storage/' . $categorie->coach->photo) }}" alt="{{ $categorie->coach->prenom }} {{ $categorie->coach->nom }}" 
+                         <img src="{{ asset('images/' . $categorie->coach->photo) }}" alt="{{ $categorie->coach->prenom }} {{ $categorie->coach->nom }}" 
                               style="width: 100%; height: 100%; object-fit: cover; {{ $categorie->coach->photo_style }}">
                     @else
                          <div style="width: 100%; height: 100%; background: linear-gradient(135deg, {{ $categorie->genre == 'garcon' ? '#2563eb' : '#ec4899' }}, {{ $categorie->genre == 'garcon' ? '#3b82f6' : '#f472b6' }}); display: flex; align-items: center; justify-content: center;">
@@ -67,7 +67,7 @@
                         
                         <div class="card-image" style="height: 320px; padding: 0; overflow: hidden; position: relative; background: {{ $categorie->genre == 'garcon' ? '#f1f5f9' : '#fff1f2' }};">
                             @if($joueur->photo)
-                                <img src="{{ asset('storage/' . $joueur->photo) }}" alt="{{ $joueur->full_name }}" 
+                                <img src="{{ asset('images/' . $joueur->photo) }}" alt="{{ $joueur->full_name }}" 
                                      style="width: 100%; height: 100%; object-fit: cover; {{ $joueur->photo_style }}">
                             @else
                                 <div style="width: 100%; height: 100%; background: linear-gradient(135deg, {{ $categorie->genre == 'garcon' ? '#2563eb' : '#ec4899' }}, {{ $categorie->genre == 'garcon' ? '#3b82f6' : '#f472b6' }}); display: flex; align-items: center; justify-content: center;">

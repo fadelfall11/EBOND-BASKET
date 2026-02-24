@@ -82,7 +82,7 @@
                             <input type="file" class="form-input" name="photo" accept="image/*">
                             <input type="hidden" name="photo_crop_data" id="photo_crop_data">
                             <div style="margin-top:1rem;">
-                                <img id="photo-cropper-preview" src="{{ $categorie->photo ? asset('storage/' . $categorie->photo) : '' }}" alt="Prévisualisation" style="max-width: 100%; max-height: 260px; border-radius: 16px; border:1px solid #e2e8f0;">
+                                <img id="photo-cropper-preview" src="{{ $categorie->photo ? asset('images/' . $categorie->photo) : '' }}" alt="Prévisualisation" style="max-width: 100%; max-height: 260px; border-radius: 16px; border:1px solid #e2e8f0;">
                             </div>
                             @error('photo')<div class="form-error">{{ $message }}</div>@enderror
                         </div>
@@ -90,7 +90,7 @@
                         @if($categorie->photo)
                             <div style="margin-bottom:1rem;">
                                 <div style="font-weight:600; color:#334155; margin-bottom:0.5rem;">Photo actuelle</div>
-                                <img src="{{ asset('storage/' . $categorie->photo) }}" alt="{{ $categorie->nom }}" style="max-width: 100%; height: 260px; {{ $categorie->photo_style }} border-radius: 16px; border:1px solid #e2e8f0;">
+                                <img src="{{ asset('images/' . $categorie->photo) }}" alt="{{ $categorie->nom }}" style="max-width: 100%; height: 260px; {{ $categorie->photo_style }} border-radius: 16px; border:1px solid #e2e8f0;">
                             </div>
                         @endif
 

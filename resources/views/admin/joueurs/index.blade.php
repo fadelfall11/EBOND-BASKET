@@ -65,7 +65,7 @@
                                     <td style="padding:0.75rem;">
                                         <div style="display:flex; align-items:center; gap:0.75rem;">
                                             @if($joueur->photo)
-                                                <img src="{{ asset('storage/' . $joueur->photo) }}" alt="{{ $joueur->full_name }}" style="width:44px; height:44px; border-radius:9999px; {{ $joueur->photo_style }} border:1px solid #e2e8f0;">
+                                                <img src="{{ asset('images/' . $joueur->photo) }}" alt="{{ $joueur->full_name }}" style="width:44px; height:44px; border-radius:9999px; {{ $joueur->photo_style }} border:1px solid #e2e8f0;">
                                             @else
                                                 <div style="width:44px; height:44px; border-radius:9999px; background:#f1f5f9; display:flex; align-items:center; justify-content:center; border:1px solid #e2e8f0; color:#64748b;">
                                                     <i class="fas fa-user"></i>

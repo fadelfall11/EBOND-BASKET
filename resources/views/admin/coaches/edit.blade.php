@@ -56,7 +56,7 @@
                         @if($coach->photo)
                             <div style="margin-bottom:1rem;">
                                 <div style="font-weight:600; color:#334155; margin-bottom:0.5rem;">Photo actuelle</div>
-                                <img src="{{ asset('storage/' . $coach->photo) }}" alt="{{ $coach->prenom }} {{ $coach->nom }}" style="max-width: 100%; height: 260px; {{ $coach->photo_style }} border-radius: 16px; border:1px solid #e2e8f0;">
+                                <img src="{{ asset('images/' . $coach->photo) }}" alt="{{ $coach->prenom }} {{ $coach->nom }}" style="max-width: 100%; height: 260px; {{ $coach->photo_style }} border-radius: 16px; border:1px solid #e2e8f0;">
                             </div>
                         @endif
 

@@ -1,5 +1,5 @@
 import Cropper from 'cropperjs';
-import 'cropperjs/dist/cropper.min.css';
+import 'cropperjs/dist/cropper.css';
 
 window.initCropper = function(inputSelector, imageSelector, cropDataInputSelector) {
     let cropper;
