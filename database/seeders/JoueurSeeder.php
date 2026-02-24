@@ -52,7 +52,7 @@ class JoueurSeeder extends Seeder
         $joueurs = [
             // Cadets Garçons
             // cherif alwely diop,abdou samb,pape malick ngom,serigne saliou gueye,ablaye dione,assana ndiaye,pape,babacar ngingue
-            ['prenom' => 'Cherif Alwely', 'nom' => 'Diop', 'poste' => 'Arrière', 'categorie_id' => $cadetsGarcons->id, 'numero' => 4, 'capitaine' => true, 'photo' => 'joueurs/CHERIF DIOP.jpeg', 'eloges' => 'Arrière complet, capable de défendre fort et de créer des solutions offensives.'],
+            ['prenom' => 'Cherif Alwely', 'nom' => 'Diop', 'poste' => 'Arrière', 'categorie_id' => $cadetsGarcons->id, 'numero' => 4, 'capitaine' => true, 'photo' => 'joueurs/CHERIF DIOP.jpeg', 'photo_position' => '50% 65%', 'eloges' => 'Arrière complet, capable de défendre fort et de créer des solutions offensives.'],
             ['prenom' => 'Abdou', 'nom' => 'Samb', 'poste' => 'Ailier fort', 'categorie_id' => $cadetsGarcons->id, 'numero' => 5, 'capitaine' => false, 'eloges' => 'Puissant et combatif, il apporte de l\'impact au rebond et dans la raquette.'],
             ['prenom' => 'Serigne Saliou', 'nom' => 'Gueye', 'poste' => 'Pivot', 'categorie_id' => $cadetsGarcons->id, 'numero' => 7, 'capitaine' => false, 'eloges' => 'Présence intérieure, protège le cercle et sécurise les rebonds.'],
             ['prenom' => 'Ablaye', 'nom' => 'Dione', 'poste' => 'Meneur', 'categorie_id' => $cadetsGarcons->id, 'numero' => 8, 'capitaine' => false, 'eloges' => 'Meneur organisé, donne le tempo et met ses coéquipiers dans les meilleures positions.'],
