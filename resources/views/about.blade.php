@@ -124,27 +124,13 @@
     </div>
 </section>
 
-<!-- CTA Section -->
-<section class="hero" style="padding: 6rem 0;">
-    <div class="container">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: white; margin-bottom: 1.5rem;">
-                Rejoignez notre famille !
-            </h2>
-            <p style="font-size: 1.25rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2.5rem;">
-                Que vous soyez débutant ou joueur confirmé, nous avons une place pour vous
-            </p>
-            <div class="hero-buttons" style="justify-content: center;">
-                <a href="{{ route('categories.index') }}" class="btn-white">
-                    <i class="fas fa-users"></i>
-                    Découvrir nos catégories
-                </a>
-                <a href="mailto:contact@ebond.sn" class="btn-outline">
-                    <i class="fas fa-envelope"></i>
-                    Nous contacter
-                </a>
-            </div>
-        </div>
+<!-- Credit Bar -->
+<div style="background: #1e293b; color: white; padding: 1rem 0; text-align: center; font-size: 0.875rem;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+        <p style="margin: 0; opacity: 0.9;">
+            <i class="fas fa-code" style="color: #fbbf24; margin-right: 0.5rem;"></i>
+            Site développé par <strong>Mohamed Fadel Fall</strong> — Développeur Junior
+        </p>
     </div>
-</section>
+</div>
 @endsection
