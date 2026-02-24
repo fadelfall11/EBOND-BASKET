@@ -82,13 +82,13 @@ class JoueurSeeder extends Seeder
             // Cadettes Filles
             // yaye fatou dieng,aminata sarr,mamy sow,ndeye dieng,fayou dieng ,mame diarra diop,sally diome,mame fatou camara
             ['prenom' => 'Yaye Fatou', 'nom' => 'Dieng', 'poste' => 'Meneuse', 'categorie_id' => $cadettesFilles->id, 'numero' => 4, 'capitaine' => true, 'eloges' => 'Leader naturelle sur le terrain, organise le jeu avec calme et précision.'],
-            ['prenom' => 'Aminata', 'nom' => 'Sarr', 'poste' => 'Arrière', 'categorie_id' => $cadettesFilles->id, 'numero' => 5, 'capitaine' => false, 'eloges' => 'Shooteuse d\'élite capable de faire basculer un match sur une série de tirs.'],
+            ['prenom' => 'Aminata', 'nom' => 'Sarr', 'poste' => 'Pivot', 'categorie_id' => $cadettesFilles->id, 'numero' => 5, 'capitaine' => false, 'eloges' => 'Shooteuse d\'élite capable de faire basculer un match sur une série de tirs.'],
             ['prenom' => 'Mamy', 'nom' => 'Sow', 'poste' => 'Ailière', 'categorie_id' => $cadettesFilles->id, 'numero' => 6, 'capitaine' => false, 'eloges' => 'Ailière percutante avec un premier pas très rapide et une bonne finition.'],
-            ['prenom' => 'Ndeye', 'nom' => 'Dieng', 'poste' => 'Ailière forte', 'categorie_id' => $cadettesFilles->id, 'numero' => 7, 'capitaine' => false, 'eloges' => 'Guerrière des parquets, excelle dans les tâches défensives et le rebond.'],
-            ['prenom' => 'Fatou', 'nom' => 'Dieng', 'poste' => 'Pivot', 'categorie_id' => $cadettesFilles->id, 'numero' => 8, 'capitaine' => false, 'eloges' => 'Technique impeccable au poste bas, avec un excellent jeu de jambes.'],
-            ['prenom' => 'Mame Diarra', 'nom' => 'Diop', 'poste' => 'Arrière', 'categorie_id' => $cadettesFilles->id, 'numero' => 9, 'capitaine' => false, 'eloges' => 'Joueuse intelligente qui anticipe bien les actions adverses.'],
+            ['prenom' => 'Ndeye', 'nom' => 'Dieng', 'poste' => 'Pivot', 'categorie_id' => $cadettesFilles->id, 'numero' => 7, 'capitaine' => false, 'eloges' => 'Guerrière des parquets, excelle dans les tâches défensives et le rebond.'],
+            ['prenom' => 'Fatou', 'nom' => 'Dieng', 'poste' => 'Meneuse', 'categorie_id' => $cadettesFilles->id, 'numero' => 8, 'capitaine' => false, 'eloges' => 'Technique impeccable au poste bas, avec un excellent jeu de jambes.'],
+            ['prenom' => 'Mame Diarra', 'nom' => 'Diop', 'poste' => 'Ailière', 'categorie_id' => $cadettesFilles->id, 'numero' => 9, 'capitaine' => false, 'eloges' => 'Joueuse intelligente qui anticipe bien les actions adverses.'],
             ['prenom' => 'Sally', 'nom' => 'Diome', 'poste' => 'Ailière', 'categorie_id' => $cadettesFilles->id, 'numero' => 10, 'capitaine' => false, 'eloges' => 'Polyvalente et régulière, elle apporte de la stabilité à l\'équipe.'],
-            ['prenom' => 'Mame Fatou', 'nom' => 'Camara', 'poste' => 'Pivot', 'categorie_id' => $cadettesFilles->id, 'numero' => 11, 'capitaine' => false, 'eloges' => 'Force de la nature sous les panneaux, intimidatrice en défense.'],
+            ['prenom' => 'Mame Fatou', 'nom' => 'Camara', 'poste' => 'Ailière forte', 'categorie_id' => $cadettesFilles->id, 'numero' => 11, 'capitaine' => false, 'eloges' => 'Force de la nature sous les panneaux, intimidatrice en défense.'],
         ];
 
         foreach ($joueurs as $index => $joueur) {
