@@ -37,7 +37,7 @@
                         </h2>
                     </div>
                     
-                    <div class="cards-grid">
+                    <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 360px)); justify-content: center; gap: 3rem;">
                         @foreach ($categoriesGarcons as $categorie)
                             <a href="{{ route('categories.show', $categorie) }}" class="card" style="display: block; text-decoration: none; color: inherit;">
                                 @if($categorie->photo)
@@ -91,7 +91,7 @@
                         </h2>
                     </div>
                     
-                    <div class="cards-grid">
+                    <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 360px)); justify-content: center; gap: 3rem;">
                         @foreach ($categoriesFilles as $categorie)
                             <a href="{{ route('categories.show', $categorie) }}" class="card" style="display: block; text-decoration: none; color: inherit;">
                                 @if($categorie->photo)
