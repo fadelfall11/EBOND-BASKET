@@ -15,6 +15,8 @@ class ActualiteSeeder extends Seeder
      */
     public function run(): void
     {
+        Actualite::where('titre', 'Nouveau programme de développement pour les débutants')->delete();
+
         $normalize = static function (string $value): string {
             $value = mb_strtolower($value);
             $value = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $value) ?: $value;
@@ -52,8 +54,8 @@ class ActualiteSeeder extends Seeder
         };
 
         $imageTournoi = $resolveImage(['tournoi-de-basket-feu-bassirou-faye', 'tournoi-bassirou-faye', 'bassirou-faye'], 0);
-        $imageProgramme = $resolveImage(['nouveau-programme-de-developpement-pour-les-debutants', 'programme-developpement-debutants', 'programme-developpement'], 1);
         $imageVictoireCadettes = $resolveImage(['victoire-des-cadettes-lors-de-la-finale-inter-ligue-contre-bambey', 'victoire-cadette', 'victoire-cadettes', 'cadettes-finale', 'finale-inter-ligue'], 2);
+        $imageFinaleU18 = $resolveImage(['final-de-nos-u18', 'finale-de-nos-u18', 'finale-u18', 'u18-finale'], 3);
 
         $actualites = [
             [
@@ -68,17 +70,6 @@ class ActualiteSeeder extends Seeder
                 'auteur' => 'Comité d\'Organisation'
             ],
             [
-                'titre' => 'Nouveau programme de développement pour les débutants',
-                'contenu' => '<p>Nous sommes fiers d\'annoncer le lancement de notre nouveau programme de développement dédié aux jeunes joueurs de 6 à 9 ans. Ce programme, élaboré par notre coach Ibrahim Ba, vise à initier les enfants au basketball de manière ludique et éducative.</p>
-                
-                <p>Le programme se déroulera chaque mercredi et samedi de 15h à 17h dans nos installations modernes. Les enfants apprendront les bases du basketball tout en développant leur coordination, leur agilité et leur esprit d\'équipe.</p>
-                
-                <p>Les inscriptions sont déjà ouvertes et les premières séances commenceront le mois prochain. N\'hésitez pas à nous contacter pour plus d\'informations sur ce programme qui promet d\'être une excellente introduction au monde du basketball.</p>',
-                'image' => $imageProgramme?->getFilename() ? ('actualites/' . $imageProgramme->getFilename()) : null,
-                'date_publication' => Carbon::now()->subWeek(),
-                'auteur' => 'Service Communication'
-            ],
-            [
                 'titre' => 'Victoire des Cadettes lors de la finale inter-ligue contre Bambey',
                 'contenu' => '<p>Nos cadettes ont réalisé une performance exceptionnelle en remportant la <strong>finale inter-ligue</strong> face à l\'équipe de <strong>Bambey</strong>. Dans une rencontre intense et engagée, nos joueuses ont su faire preuve de caractère, de discipline et d\'un esprit d\'équipe remarquable.</p>
 
@@ -89,6 +80,19 @@ class ActualiteSeeder extends Seeder
                 <p>Félicitations à toutes les joueuses, au staff technique et aux supporters qui ont accompagné l\'équipe tout au long de la compétition. Nous continuons sur cette dynamique avec ambition et humilité.</p>',
                 'image' => $imageVictoireCadettes?->getFilename() ? ('actualites/' . $imageVictoireCadettes->getFilename()) : null,
                 'date_publication' => Carbon::now()->subWeeks(3),
+                'auteur' => 'Service Communication'
+            ],
+            [
+                'titre' => 'En finale de nos U18 sous le coaching de Alioune Ndiaye',
+                'contenu' => '<p>Nos U18 ont porté haut les couleurs d\'EBOND en atteignant la <strong>finale</strong> sous le coaching du coach <strong>Alioune Ndiaye</strong>, face à une belle équipe de <strong>Thiès</strong>.</p>
+
+                <p>Même si le score final n\'a pas été en notre faveur, nous retenons l\'essentiel : un groupe uni, du courage, de la discipline et une progression remarquable tout au long de la compétition.</p>
+
+                <p>Cette finale est une étape importante dans notre projet de formation. Elle montre que nos jeunes talents travaillent avec sérieux, apprennent vite et représentent dignement le basket diourbelois.</p>
+
+                <p style="margin-top: 1rem; font-weight: 800; color: #1e40af;">Baol Baol we are</p>',
+                'image' => $imageFinaleU18?->getFilename() ? ('actualites/' . $imageFinaleU18->getFilename()) : null,
+                'date_publication' => Carbon::now()->subDays(10),
                 'auteur' => 'Service Communication'
             ]
         ];
