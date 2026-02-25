@@ -570,6 +570,14 @@
         }
         
         @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
             .mobile-menu-btn {
                 display: block;
             }
@@ -585,6 +593,12 @@
                 padding: 1rem;
                 box-shadow: var(--shadow-lg);
                 gap: 0.5rem;
+            }
+
+            .nav-link,
+            .btn-primary {
+                width: 100%;
+                justify-content: flex-start;
             }
             
             .nav-links.active {
@@ -772,7 +786,7 @@
                 @endif
             </div>
             
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu" aria-controls="navLinks" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -803,9 +817,60 @@
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.getElementById('navLinks');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+
+        const isMobileNav = () => window.matchMedia('(max-width: 768px)').matches;
+
+        const openMobileNav = () => {
+            navLinks.classList.add('active');
+            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        };
+
+        const closeMobileNav = () => {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        };
+
+        const toggleMobileNav = () => {
+            if (!isMobileNav()) return;
+            if (navLinks.classList.contains('active')) {
+                closeMobileNav();
+            } else {
+                openMobileNav();
+            }
+        };
+
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleMobileNav();
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!isMobileNav()) return;
+            if (!navLinks.classList.contains('active')) return;
+            const clickedInsideNavbar = e.target.closest && e.target.closest('#navbar');
+            if (!clickedInsideNavbar) {
+                closeMobileNav();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!isMobileNav()) return;
+            if (e.key === 'Escape') {
+                closeMobileNav();
+            }
+        });
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                if (!isMobileNav()) return;
+                closeMobileNav();
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (!isMobileNav()) {
+                closeMobileNav();
+            }
         });
         
         // Navbar scroll effect
