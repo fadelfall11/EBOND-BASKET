@@ -31,13 +31,16 @@
                 @foreach ($actualites as $actualite)
                     <div class="card">
                         @if($actualite->image)
-                            <img src="{{ asset('images/' . $actualite->image) }}" alt="{{ $actualite->titre }}" style="width: 100%; height: auto; display: block;">
+                            <div style="height: 240px; overflow: hidden; background: #0f172a; position: relative;">
+                                <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,23,42,0.00) 55%, rgba(15,23,42,0.55)); pointer-events: none;"></div>
+                                <img src="{{ asset('images/' . $actualite->image) }}" alt="{{ $actualite->titre }}" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                            </div>
                         @else
                             <div class="card-image" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2563eb, #3b82f6); color: white; font-size: 3rem;">
                                 <i class="fas fa-newspaper"></i>
                             </div>
                         @endif
-                        <div class="card-content">
+                        <div class="card-content" style="display: flex; flex-direction: column; height: 100%;">
                             <div style="display: flex; gap: 1rem; margin-bottom: 1rem; font-size: 0.875rem; color: #64748b; flex-wrap: wrap;">
                                 <span style="display: flex; align-items: center; gap: 0.25rem;">
                                     <i class="fas fa-calendar-alt"></i>
@@ -54,10 +57,12 @@
                             <h3 class="card-title">{{ $actualite->titre }}</h3>
                             <p class="card-text">{{ $actualite->extrait }}</p>
                             
-                            <a href="{{ route('actualites.show', $actualite) }}" class="btn-primary" style="width: 100%; justify-content: center;">
-                                Lire la suite
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
+                            <div style="margin-top: auto; padding-top: 1rem;">
+                                <a href="{{ route('actualites.show', $actualite) }}" class="btn-primary" style="width: 100%; justify-content: center; padding: 0.75rem 1.1rem;">
+                                    Lire la suite
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 @endforeach

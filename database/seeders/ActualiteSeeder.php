@@ -53,7 +53,7 @@ class ActualiteSeeder extends Seeder
             return $images->get($fallbackIndex);
         };
 
-        $imageTournoi = $resolveImage(['tournoi-de-basket-feu-bassirou-faye', 'tournoi-bassirou-faye', 'bassirou-faye'], 0);
+        $imageTournoi = $resolveImage(['tournoi-basket', 'tournoi-de-basket-feu-bassirou-faye', 'tournoi-bassirou-faye', 'bassirou-faye'], 1);
         $imageVictoireCadettes = $resolveImage(['victoire-des-cadettes-lors-de-la-finale-inter-ligue-contre-bambey', 'victoire-cadette', 'victoire-cadettes', 'cadettes-finale', 'finale-inter-ligue'], 2);
         $imageFinaleU18 = $resolveImage(['final-de-nos-u18', 'finale-de-nos-u18', 'finale-u18', 'u18-finale'], 3);
 
