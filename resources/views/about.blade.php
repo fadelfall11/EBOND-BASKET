@@ -28,7 +28,7 @@
         <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 360px)); justify-content: center; gap: 3rem;">
             <div class="card">
                 <div class="card-image" style="height: 350px; padding: 0; overflow: hidden; position: relative;">
-                    <img src="{{ asset('images/Leadership/Dieylani kebe.jpeg') }}" alt="Dieylani Kebe" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                    <img src="{{ asset('images/Leadership/Dieylani kebe.jpeg') }}" alt="Dieylani Kebe" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; display: block;">
                 </div>
                 <div class="card-content" style="text-align: center;">
                     <h3 class="card-title" style="margin-bottom: 0.5rem;">Dieylani Kebe</h3>
@@ -49,7 +49,7 @@
             
             <div class="card">
                 <div class="card-image" style="height: 350px; padding: 0; overflow: hidden; position: relative;">
-                    <img src="{{ asset('images/Leadership/Abbabacar Ndiaye.jpeg') }}" alt="Ababacar Ndiaye" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                    <img src="{{ asset('images/Leadership/Abbabacar Ndiaye.jpeg') }}" alt="Ababacar Ndiaye" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; display: block;">
                 </div>
                 <div class="card-content" style="text-align: center;">
                     <h3 class="card-title" style="margin-bottom: 0.5rem;">Ababacar Ndiaye</h3>
