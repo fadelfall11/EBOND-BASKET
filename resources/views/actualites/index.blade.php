@@ -31,9 +31,15 @@
                 @foreach ($actualites as $actualite)
                     <div class="card">
                         @if($actualite->image)
+                            @php
+                                $titleLower = \Illuminate\Support\Str::lower($actualite->titre ?? '');
+                                $objectPosition = str_contains($titleLower, 'tournoi de basket feu bassirou faye')
+                                    ? 'center top'
+                                    : 'center';
+                            @endphp
                             <div style="height: 240px; overflow: hidden; background: #0f172a; position: relative;">
                                 <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,23,42,0.00) 55%, rgba(15,23,42,0.55)); pointer-events: none;"></div>
-                                <img src="{{ asset('images/' . $actualite->image) }}" alt="{{ $actualite->titre }}" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                                <img src="{{ asset('images/' . $actualite->image) }}" alt="{{ $actualite->titre }}" style="width: 100%; height: 100%; object-fit: cover; object-position: {{ $objectPosition }}; display: block;">
                             </div>
                         @else
                             <div class="card-image" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2563eb, #3b82f6); color: white; font-size: 3rem;">

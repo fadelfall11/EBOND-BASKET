@@ -31,6 +31,13 @@
                 </a>
             </div>
         </div>
+
+        <div style="margin-top: 2.5rem; text-align: center;">
+            <a href="{{ route('actualites.index') }}" class="btn-primary" style="padding: 0.8rem 1.6rem; font-size: 0.95rem;">
+                Voir plus d'actualités
+                <i class="fas fa-arrow-right" style="margin-left: 0.4rem;"></i>
+            </a>
+        </div>
     </div>
 </section>
 
