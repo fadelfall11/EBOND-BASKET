@@ -62,13 +62,11 @@
                             
                             <h3 class="card-title">{{ $actualite->titre }}</h3>
                             <p class="card-text">{{ $actualite->extrait }}</p>
-                            
-                            <div style="margin-top: auto; padding-top: 1rem;">
-                                <a href="{{ route('actualites.show', $actualite) }}" class="btn-primary" style="width: 100%; justify-content: center; padding: 0.75rem 1.1rem;">
-                                    Lire la suite
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
+
+                            <a href="{{ route('actualites.show', $actualite) }}" class="btn-primary" style="width: 100%; justify-content: center; padding: 0.75rem 1.1rem; margin-top: 1rem;">
+                                Voir plus
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 @endforeach
