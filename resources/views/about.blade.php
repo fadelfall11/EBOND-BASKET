@@ -113,7 +113,7 @@
 
                         @if(Str::lower(Str::ascii($coach->prenom . ' ' . $coach->nom)) === 'alioune ndiaye')
                             <div style="margin-top: 1.25rem; display: flex; justify-content: center;">
-                                <a href="{{ route('about') }}#coach-alioune-ndiaye" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.1rem; border-radius: 9999px; background: rgba(37, 99, 235, 0.12); color: #2563eb; font-weight: 700; font-size: 0.9rem; border: 1px solid rgba(37, 99, 235, 0.25); text-decoration: none;">
+                                <a href="{{ route('coaches.show', $coach) }}" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.1rem; border-radius: 9999px; background: rgba(37, 99, 235, 0.12); color: #2563eb; font-weight: 700; font-size: 0.9rem; border: 1px solid rgba(37, 99, 235, 0.25); text-decoration: none;">
                                     Voir plus
                                     <i class="fas fa-arrow-right" style="font-size: 0.9rem;"></i>
                                 </a>
@@ -130,53 +130,6 @@
                 </div>
             @endforelse
         </div>
-
-        @if($coaches->contains(fn($c) => Str::lower(Str::ascii($c->prenom . ' ' . $c->nom)) === 'alioune ndiaye'))
-            <div id="coach-alioune-ndiaye" style="margin-top: 4rem; padding-top: 1rem;">
-                <div class="section-header" style="margin-bottom: 2rem; text-align: left;">
-                    <h3 class="section-title" style="font-size: 1.75rem;">Alioune Ndiaye — Voir plus</h3>
-                    <p class="section-subtitle" style="max-width: 900px;">
-                        Galerie photos : Alioune Ndiaye avec nos jeunes talents
-                    </p>
-                </div>
-
-                @php
-                    $aliouneGallery = [
-                        [
-                            'src' => 'images/alioune ndiaye/WhatsApp Image 2026-02-25 at 01.00.28.jpeg',
-                            'caption' => 'Une relation de confiance qui se voit : écoute, respect et esprit d\'équipe.',
-                        ],
-                        [
-                            'src' => 'images/alioune ndiaye/WhatsApp Image 2026-02-25 at 01.00.28 (1).jpeg',
-                            'caption' => 'Cohésion et solidarité : Alioune Ndiaye construit un groupe uni, match après match.',
-                        ],
-                        [
-                            'src' => 'images/alioune ndiaye/WhatsApp Image 2026-02-25 at 01.03.02.jpeg',
-                            'caption' => 'Transmission et motivation : un coach proche de ses joueurs, pour faire grandir les talents.',
-                        ],
-                    ];
-                @endphp
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
-                    @foreach($aliouneGallery as $item)
-                        <div style="background: white; border: 1px solid #e2e8f0; border-radius: 1rem; overflow: hidden;">
-                            <div style="height: 260px; overflow: hidden; background: #0f172a;">
-                                <img src="{{ asset($item['src']) }}" alt="Alioune Ndiaye" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
-                            </div>
-                            <div style="padding: 1rem 1.1rem;">
-                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #2563eb; font-weight: 700; font-size: 0.9rem;">
-                                    <i class="fas fa-heart" style="color: #ef4444;"></i>
-                                    <span>Entente & cohésion</span>
-                                </div>
-                                <p style="margin: 0; color: #475569; line-height: 1.6;">
-                                    {{ $item['caption'] }}
-                                </p>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        @endif
     </div>
 </section>
 

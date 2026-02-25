@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\CoachController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\AdminDashboardController;
@@ -15,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
+
+Route::get('/coaches/{coach}', [CoachController::class, 'show'])->name('coaches.show');
 
 Route::resource('categories', CategorieController::class)->only(['index', 'show']);
 Route::resource('actualites', ActualiteController::class)->only(['index', 'show']);
