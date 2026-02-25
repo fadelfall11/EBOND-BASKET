@@ -25,12 +25,10 @@
             </p>
         </div>
         
-        <div class="cards-grid">
+        <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 360px)); justify-content: center; gap: 3rem;">
             <div class="card">
                 <div class="card-image" style="height: 350px; padding: 0; overflow: hidden; position: relative;">
-                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #1e40af, #2563eb); display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-crown" style="font-size: 5rem; color: rgba(255,255,255,0.5);"></i>
-                    </div>
+                    <img src="{{ asset('images/Leadership/Dieylani kebe.jpeg') }}" alt="Dieylani Kebe" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
                 </div>
                 <div class="card-content" style="text-align: center;">
                     <h3 class="card-title" style="margin-bottom: 0.5rem;">Dieylani Kebe</h3>
@@ -51,9 +49,7 @@
             
             <div class="card">
                 <div class="card-image" style="height: 350px; padding: 0; overflow: hidden; position: relative;">
-                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #ec4899, #f472b6); display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-star" style="font-size: 5rem; color: rgba(255,255,255,0.5);"></i>
-                    </div>
+                    <img src="{{ asset('images/Leadership/Abbabacar Ndiaye.jpeg') }}" alt="Ababacar Ndiaye" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
                 </div>
                 <div class="card-content" style="text-align: center;">
                     <h3 class="card-title" style="margin-bottom: 0.5rem;">Ababacar Ndiaye</h3>
