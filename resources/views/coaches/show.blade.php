@@ -49,6 +49,27 @@
                     <p style="margin: 1rem 0 0; color: #475569; line-height: 1.75;">
                         {{ $coach->bio }}
                     </p>
+
+                    @if(Str::lower(Str::ascii($coach->prenom . ' ' . $coach->nom)) === 'alioune ndiaye')
+                        <div style="margin-top: 1.25rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.1rem 1.1rem;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                    <div style="width: 38px; height: 38px; border-radius: 12px; background: rgba(37, 99, 235, 0.12); display: inline-flex; align-items: center; justify-content: center; color: #2563eb;">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                    <div style="font-weight: 900; color: #0f172a;">À propos</div>
+                                </div>
+                                <span class="badge" style="background: rgba(251, 191, 36, 0.18); color: #92400e; padding: 0.25rem 0.75rem; border-radius: 9999px; font-weight: 800; font-size: 0.8rem; border: 1px solid rgba(251, 191, 36, 0.28);">
+                                    INSEPS — 2023
+                                </span>
+                            </div>
+                            <p style="margin: 0; color: #475569; line-height: 1.75;">
+                                Alioune Ndiaye est diplômé de l'INSEPS (Institut National Supérieur de l'Éducation Populaire et du Sport) en 2023.
+                                Professeur d'Éducation Physique et Sportive, il incarne le sérieux, la transmission et l'exigence.
+                                Il fait la fierté du basket diourbelois.
+                            </p>
+                        </div>
+                    @endif
                 </div>
             </div>
 
