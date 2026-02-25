@@ -61,7 +61,7 @@ class JoueurSeeder extends Seeder
 
             // Minimes Garçons
             // papa idy omar sy,thierno konté,ousmane samb,serigne saliou,thierno,birahim diba,pape maguette,fallou
-            ['prenom' => 'Papa Idy Omar', 'nom' => 'Sy', 'poste' => 'Pivot', 'categorie_id' => $minimesGarcons->id, 'numero' => 4, 'capitaine' => true, 'eloges' => 'Grand et solide, il sécurise la raquette et apporte une présence importante au rebond.'],
+            ['prenom' => 'Papa Idy Omar', 'nom' => 'Sy', 'poste' => 'Pivot', 'categorie_id' => $minimesGarcons->id, 'numero' => 4, 'capitaine' => true, 'photo' => 'joueurs/OMAR SY.jpeg', 'eloges' => 'Grand et solide, il sécurise la raquette et apporte une présence importante au rebond.'],
             ['prenom' => 'Thierno', 'nom' => 'Konté', 'poste' => 'Arrière', 'categorie_id' => $minimesGarcons->id, 'numero' => 5, 'capitaine' => false, 'eloges' => 'Shooter naturel avec une mécanique de tir fluide et une grande précision.'],
             ['prenom' => 'Ousmane', 'nom' => 'Samb', 'poste' => 'Meneur', 'categorie_id' => $minimesGarcons->id, 'numero' => 6, 'capitaine' => false, 'eloges' => 'Organise le jeu avec énergie et met du rythme en transition.'],
             ['prenom' => 'Serigne', 'nom' => 'Saliou', 'poste' => 'Ailier fort', 'categorie_id' => $minimesGarcons->id, 'numero' => 7, 'capitaine' => false, 'eloges' => 'Fort potentiel athlétique, très actif au rebond et en défense.'],
