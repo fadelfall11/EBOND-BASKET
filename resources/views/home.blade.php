@@ -48,14 +48,14 @@
                 <div class="card-content">
                     <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
                         <div class="stat-icon" style="width: 48px; height: 48px; margin: 0; font-size: 1.25rem;">
-                            <i class="fas fa-running"></i>
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <h3 class="card-title" style="margin: 0;">Rythme & Intensité</h3>
+                        <h3 class="card-title" style="margin: 0;">Excellence & Savoir</h3>
                     </div>
-                    <p class="card-text">Séquences rapides, transitions fulgurantes et défense active pour garder l'avantage.</p>
+                    <p class="card-text">À EBOND, nous valorisons les bons élèves, la discipline scolaire et la curiosité pour apprendre et grandir.</p>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <span style="color: #1e40af; font-weight: 600;"><i class="fas fa-bolt"></i> Contre-attaque</span>
-                        <span style="color: #1e40af; font-weight: 600;"><i class="fas fa-stopwatch"></i> Endurance</span>
+                        <span style="color: #1e40af; font-weight: 600;"><i class="fas fa-book"></i> Études</span>
+                        <span style="color: #1e40af; font-weight: 600;"><i class="fas fa-lightbulb"></i> Savoir</span>
                     </div>
                 </div>
             </div>
