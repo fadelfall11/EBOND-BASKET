@@ -140,11 +140,40 @@
                     </p>
                 </div>
 
-                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.25rem;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; color: #64748b;">
-                        <i class="fas fa-images" style="color: #2563eb;"></i>
-                        <span>Ajoute tes photos dans <strong>public/images/coaches/alioune-ndiaye</strong> et on les affichera ici.</span>
-                    </div>
+                @php
+                    $aliouneGallery = [
+                        [
+                            'src' => 'images/alioune ndiaye/WhatsApp Image 2026-02-25 at 01.00.28.jpeg',
+                            'caption' => 'Une relation de confiance qui se voit : écoute, respect et esprit d\'équipe.',
+                        ],
+                        [
+                            'src' => 'images/alioune ndiaye/WhatsApp Image 2026-02-25 at 01.00.28 (1).jpeg',
+                            'caption' => 'Cohésion et solidarité : Alioune Ndiaye construit un groupe uni, match après match.',
+                        ],
+                        [
+                            'src' => 'images/alioune ndiaye/WhatsApp Image 2026-02-25 at 01.03.02.jpeg',
+                            'caption' => 'Transmission et motivation : un coach proche de ses joueurs, pour faire grandir les talents.',
+                        ],
+                    ];
+                @endphp
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
+                    @foreach($aliouneGallery as $item)
+                        <div style="background: white; border: 1px solid #e2e8f0; border-radius: 1rem; overflow: hidden;">
+                            <div style="height: 260px; overflow: hidden; background: #0f172a;">
+                                <img src="{{ asset($item['src']) }}" alt="Alioune Ndiaye" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                            </div>
+                            <div style="padding: 1rem 1.1rem;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #2563eb; font-weight: 700; font-size: 0.9rem;">
+                                    <i class="fas fa-heart" style="color: #ef4444;"></i>
+                                    <span>Entente & cohésion</span>
+                                </div>
+                                <p style="margin: 0; color: #475569; line-height: 1.6;">
+                                    {{ $item['caption'] }}
+                                </p>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         @endif
